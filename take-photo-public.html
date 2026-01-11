@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>THALES16 — Take Photo</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div class="app">
+    <!-- Top bar (public access) -->
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-badge">T16</div>
+        <div>
+          <div class="brand-name">THALES16</div>
+          <div class="brand-sub">PHOTO_ATB — Photo capture (public access)</div>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <span class="chip">Public</span>
+        <a class="btn-soft" href="login.html">Login</a>
+      </div>
+    </header>
+
+    <div class="layout">
+      <!-- Sidebar (still available for demo) -->
+      <aside class="sidebar">
+        <a class="side-link" href="dashboard.html">Dashboard</a>
+        <a class="side-link" href="photos.html">Photos</a>
+        <a class="side-link" href="events.html">Events</a>
+        <a class="side-link active" href="take-photo-public.html">Take Photo</a>
+
+        <div class="side-sep"></div>
+
+        <a class="side-link" href="users.html">Users</a>
+        <a class="side-link" href="config.html">Configuration</a>
+      </aside>
+
+      <!-- Main -->
+      <main class="main">
+        <div class="page-head">
+          <div>
+            <h1 class="page-title">Take a photo</h1>
+            <p class="page-sub">Manual capture without authentication.</p>
+          </div>
+
+          <div class="page-actions">
+            <a class="btn-outline" href="photos.html">Open photos</a>
+            <a class="btn-primary" href="events.html">Open events</a>
+          </div>
+        </div>
+
+        <section class="grid-capture">
+          <!-- Capture panel -->
+          <div class="card panel">
+            <div class="panel-head">
+              <h2 class="panel-title">Capture control</h2>
+              <span class="badge info">Ready</span>
+            </div>
+
+            <div class="capture-box">
+              <div class="capture-icon">📷</div>
+              <div>
+                <div class="capture-title">Capture now</div>
+                <div class="capture-sub">
+                  The system checks disk space and reads luminosity before saving.
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+              <button class="btn-primary" type="button">Take photo</button>
+              <button class="btn-outline" type="button">Simulate error</button>
+            </div>
+
+            <div class="muted" style="font-size:13px; margin-top:12px;">
+              After capture: metadata archived (timestamp, user/system, luminosity) + UDP message.
+            </div>
+          </div>
+
+          <!-- Result panel -->
+          <div class="card panel">
+            <div class="panel-head">
+              <h2 class="panel-title">Result</h2>
+              <a class="link" href="photos.html">View history</a>
+            </div>
+
+            <!-- Success message -->
+            <div class="result-box ok">
+              <div class="result-top">
+                <span class="badge ok">SUCCESS</span>
+                <span class="muted" style="font-size:13px;">2026-01-09 18:42</span>
+              </div>
+              <div class="result-title">Photo captured successfully.</div>
+              <div class="result-sub">
+                Luminosity: <b>245 lx</b> • Disk: <b>7.8 GB free</b> • UDP: <b>sent</b>
+              </div>
+              <div style="margin-top:12px;">
+                <a class="btn-mini" href="photo-details.html">Open details</a>
+                <a class="btn-mini" href="events.html">Open related events</a>
+              </div>
+            </div>
+
+            <!-- Error message (example) -->
+            <div class="result-box danger" style="margin-top:12px;">
+              <div class="result-top">
+                <span class="badge alarm">ERROR</span>
+                <span class="muted" style="font-size:13px;">2026-01-09 18:40</span>
+              </div>
+              <div class="result-title">Capture failed.</div>
+              <div class="result-sub">
+                Reason: <b>Insufficient disk space</b>. Photo capture was blocked.
+              </div>
+              <div style="margin-top:12px;">
+                <a class="btn-mini" href="events.html">Open events</a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <footer class="foot">
+          <span>THALES16 • PHOTO_ATB</span>
+          <span class="muted">Public capture page</span>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>

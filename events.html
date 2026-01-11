@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>THALES16 — Events</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div class="app">
+    <!-- Top bar -->
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-badge">T16</div>
+        <div>
+          <div class="brand-name">THALES16</div>
+          <div class="brand-sub">PHOTO_ATB — Local Web Interface</div>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <span class="chip">Role: ADMIN</span>
+        <a class="btn-soft" href="login.html">Logout</a>
+      </div>
+    </header>
+
+    <div class="layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <a class="side-link" href="dashboard.html">Dashboard</a>
+        <a class="side-link" href="photos.html">Photos</a>
+        <a class="side-link active" href="events.html">Events</a>
+        <a class="side-link" href="take-photo-public.html">Take Photo</a>
+
+        <div class="side-sep"></div>
+
+        <a class="side-link" href="users.html">Users</a>
+        <a class="side-link" href="config.html">Configuration</a>
+      </aside>
+
+      <!-- Main -->
+      <main class="main">
+        <div class="page-head">
+          <div>
+            <h1 class="page-title">Events</h1>
+            <p class="page-sub">View, filter, and export application logs.</p>
+          </div>
+
+          <div class="page-actions">
+            <button class="btn-outline" type="button">Export CSV</button>
+            <a class="btn-primary" href="dashboard.html">Back to dashboard</a>
+          </div>
+        </div>
+
+        <!-- Filters -->
+        <section class="card panel" style="margin-bottom:12px;">
+          <div class="panel-head">
+            <h2 class="panel-title">Filters</h2>
+            <span class="muted" style="font-size:13px;">By date, user, and event type</span>
+          </div>
+
+          <div class="filters-events">
+            <div>
+              <label class="field-label" for="from">From</label>
+              <input id="from" type="datetime-local">
+            </div>
+
+            <div>
+              <label class="field-label" for="to">To</label>
+              <input id="to" type="datetime-local">
+            </div>
+
+            <div>
+              <label class="field-label" for="user">User</label>
+              <input id="user" type="text" placeholder="ex: admin01">
+            </div>
+
+            <div>
+              <label class="field-label" for="type">Event type</label>
+              <select id="type">
+                <option>All</option>
+                <option>INFO</option>
+                <option>WARNING</option>
+                <option>ALARM</option>
+              </select>
+            </div>
+
+            <div class="wide">
+              <label class="field-label" for="search">Search in description</label>
+              <input id="search" type="text" placeholder="ex: sensor, disk, login, photo...">
+            </div>
+          </div>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
+            <button class="btn-outline" type="button">Apply</button>
+            <button class="btn-outline" type="button">Reset</button>
+          </div>
+        </section>
+
+        <!-- Logs table -->
+        <section class="card panel">
+          <div class="panel-head">
+            <h2 class="panel-title">Event records</h2>
+            <span class="muted" style="font-size:13px;">Timestamped system actions</span>
+          </div>
+
+          <div style="overflow:auto;">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th style="width:180px;">Timestamp</th>
+                  <th style="width:110px;">Type</th>
+                  <th style="width:140px;">User</th>
+                  <th style="width:140px;">Profile</th>
+                  <th style="width:170px;">Action</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2026-01-09 18:42</td>
+                  <td><span class="badge info">INFO</span></td>
+                  <td>admin01</td>
+                  <td>ADMIN</td>
+                  <td>TAKE_PHOTO_OK</td>
+                  <td>Photo captured successfully and archived with metadata.</td>
+                </tr>
+                <tr>
+                  <td>2026-01-09 18:42</td>
+                  <td><span class="badge info">INFO</span></td>
+                  <td>system</td>
+                  <td>—</td>
+                  <td>UDP_SENT</td>
+                  <td>UDP message sent after capture.</td>
+                </tr>
+                <tr>
+                  <td>2026-01-09 18:41</td>
+                  <td><span class="badge warn">WARNING</span></td>
+                  <td>system</td>
+                  <td>—</td>
+                  <td>LUX_NEAR_THRESHOLD</td>
+                  <td>Luminosity close to threshold (150 lx).</td>
+                </tr>
+                <tr>
+                  <td>2026-01-09 10:12</td>
+                  <td><span class="badge info">INFO</span></td>
+                  <td>operateur07</td>
+                  <td>OPERATEUR</td>
+                  <td>LOGIN_SUCCESS</td>
+                  <td>User authenticated successfully.</td>
+                </tr>
+                <tr>
+                  <td>2026-01-09 10:10</td>
+                  <td><span class="badge warn">WARNING</span></td>
+                  <td>operateur07</td>
+                  <td>OPERATEUR</td>
+                  <td>LOGIN_FAIL</td>
+                  <td>Invalid password (attempt 2/3).</td>
+                </tr>
+                <tr>
+                  <td>2026-01-09 08:02</td>
+                  <td><span class="badge alarm">ALARM</span></td>
+                  <td>system</td>
+                  <td>—</td>
+                  <td>SENSOR_FAILURE</td>
+                  <td>Brightness sensor failure detected (no signal).</td>
+                </tr>
+                <tr>
+                  <td>2026-01-08 22:18</td>
+                  <td><span class="badge alarm">ALARM</span></td>
+                  <td>system</td>
+                  <td>—</td>
+                  <td>DISK_INSUFFICIENT</td>
+                  <td>Capture blocked: insufficient disk space.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="pager">
+            <button class="btn-outline" type="button">← Previous</button>
+            <span class="muted">Page 1 / 12</span>
+            <button class="btn-outline" type="button">Next →</button>
+          </div>
+        </section>
+
+        <footer class="foot">
+          <span>THALES16 • PHOTO_ATB</span>
+          <span class="muted">Local interface</span>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>

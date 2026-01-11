@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>THALES16 — Photos</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div class="app">
+    <!-- Top bar -->
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-badge">T16</div>
+        <div>
+          <div class="brand-name">THALES16</div>
+          <div class="brand-sub">PHOTO_ATB — Local Web Interface</div>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <span class="chip">Role: ADMIN</span>
+        <a class="btn-soft" href="login.html">Logout</a>
+      </div>
+    </header>
+
+    <div class="layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <a class="side-link" href="dashboard.html">Dashboard</a>
+        <a class="side-link active" href="photos.html">Photos</a>
+        <a class="side-link" href="events.html">Events</a>
+        <a class="side-link" href="take-photo-public.html">Take Photo</a>
+
+        <div class="side-sep"></div>
+
+        <a class="side-link" href="users.html">Users</a>
+        <a class="side-link" href="config.html">Configuration</a>
+      </aside>
+
+      <!-- Main -->
+      <main class="main">
+        <div class="page-head">
+          <div>
+            <h1 class="page-title">Photos</h1>
+            <p class="page-sub">Browse photo history and metadata.</p>
+          </div>
+
+          <div class="page-actions">
+            <a class="btn-outline" href="take-photo-public.html">Take photo</a>
+            <a class="btn-primary" href="photo-details.html">Open sample details</a>
+          </div>
+        </div>
+
+        <!-- Filters -->
+        <section class="card panel" style="margin-bottom:12px;">
+          <div class="panel-head">
+            <h2 class="panel-title">Filters</h2>
+            <span class="muted" style="font-size:13px;">Search by date / user / status</span>
+          </div>
+
+          <div class="filters">
+            <div>
+              <label class="field-label" for="dateFrom">Date from</label>
+              <input id="dateFrom" type="date">
+            </div>
+            <div>
+              <label class="field-label" for="dateTo">Date to</label>
+              <input id="dateTo" type="date">
+            </div>
+            <div>
+              <label class="field-label" for="user">User</label>
+              <input id="user" type="text" placeholder="ex: operateur07">
+            </div>
+            <div>
+              <label class="field-label" for="status">Status</label>
+              <select id="status">
+                <option>All</option>
+                <option>OK</option>
+                <option>Error</option>
+                <option>Storage insufficient</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
+            <button class="btn-outline" type="button">Apply</button>
+            <button class="btn-outline" type="button">Reset</button>
+          </div>
+        </section>
+
+        <!-- Photos table -->
+        <section class="card panel">
+          <div class="panel-head">
+            <h2 class="panel-title">Photo history</h2>
+            <span class="muted" style="font-size:13px;">Click a row to open details</span>
+          </div>
+
+          <div style="overflow:auto;">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th style="width:160px;">Preview</th>
+                  <th style="width:180px;">Timestamp</th>
+                  <th style="width:130px;">User</th>
+                  <th style="width:120px;">Luminosity</th>
+                  <th style="width:140px;">Status</th>
+                  <th>Notes</th>
+                  <th style="width:140px;">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="row-link" onclick="window.location='photo-details.html';">
+                  <td>
+                    <div class="thumb">
+                      <img src="https://www.sbg-systems.com/wp-content/uploads/Satellite-positioning-systems-navigation-1024x768.webp" alt="Photo preview">
+                    </div>
+                  </td>
+                  <td>2026-01-09 18:42</td>
+                  <td>admin01</td>
+                  <td>245 lx</td>
+                  <td><span class="badge ok">OK</span></td>
+                  <td>Saved with metadata</td>
+                  <td>
+                    <a class="btn-mini" href="photo-details.html">Details</a>
+                    <a class="btn-mini danger" href="#">Delete</a>
+                  </td>
+                </tr>
+
+                <tr class="row-link" onclick="window.location='photo-details.html';">
+                  <td>
+                    <div class="thumb">
+                      <span class="thumb-text">IMG</span>
+                    </div>
+                  </td>
+                  <td>2026-01-09 08:02</td>
+                  <td>system</td>
+                  <td>—</td>
+                  <td><span class="badge alarm">ALARM</span></td>
+                  <td>Sensor failure detected</td>
+                  <td>
+                    <a class="btn-mini" href="photo-details.html">Details</a>
+                    <a class="btn-mini danger" href="#">Delete</a>
+                  </td>
+                </tr>
+
+                <tr class="row-link" onclick="window.location='photo-details.html';">
+                  <td>
+                    <div class="thumb">
+                      <img src="https://www.sbg-systems.com/wp-content/uploads/Satellite-positioning-systems-navigation-1024x768.webp" alt="Photo preview">
+                    </div>
+                  </td>
+                  <td>2026-01-08 21:15</td>
+                  <td>operateur07</td>
+                  <td>92 lx</td>
+                  <td><span class="badge warn">WARNING</span></td>
+                  <td>Luminosity under threshold</td>
+                  <td>
+                    <a class="btn-mini" href="photo-details.html">Details</a>
+                    <a class="btn-mini danger" href="#">Delete</a>
+                  </td>
+                </tr>
+
+                <tr class="row-link" onclick="window.location='photo-details.html';">
+                  <td>
+                    <div class="thumb">
+                      <img src="https://www.sbg-systems.com/wp-content/uploads/Satellite-positioning-systems-navigation-1024x768.webp" alt="Photo preview">
+                    </div>
+                  </td>
+                  <td>2026-01-07 14:50</td>
+                  <td>system</td>
+                  <td>310 lx</td>
+                  <td><span class="badge info">INFO</span></td>
+                  <td>Automatic capture (24h rule)</td>
+                  <td>
+                    <a class="btn-mini" href="photo-details.html">Details</a>
+                    <a class="btn-mini danger" href="#">Delete</a>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+          <!-- pagination -->
+          <div class="pager">
+            <button class="btn-outline" type="button">← Previous</button>
+            <span class="muted">Page 1 / 5</span>
+            <button class="btn-outline" type="button">Next →</button>
+          </div>
+        </section>
+
+        <footer class="foot">
+          <span>THALES16 • PHOTO_ATB</span>
+          <span class="muted">Local interface</span>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>

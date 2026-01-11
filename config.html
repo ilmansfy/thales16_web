@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>THALES16 — Configuration</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div class="app">
+    <!-- Top bar -->
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-badge">T16</div>
+        <div>
+          <div class="brand-name">THALES16</div>
+          <div class="brand-sub">PHOTO_ATB — Local Web Interface</div>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <span class="chip">Role: ADMIN</span>
+        <a class="btn-soft" href="login.html">Logout</a>
+      </div>
+    </header>
+
+    <div class="layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <a class="side-link" href="dashboard.html">Dashboard</a>
+        <a class="side-link" href="photos.html">Photos</a>
+        <a class="side-link" href="events.html">Events</a>
+        <a class="side-link" href="take-photo-public.html">Take Photo</a>
+
+        <div class="side-sep"></div>
+
+        <a class="side-link" href="users.html">Users</a>
+        <a class="side-link active" href="config.html">Configuration</a>
+      </aside>
+
+      <!-- Main -->
+      <main class="main">
+        <div class="page-head">
+          <div>
+            <h1 class="page-title">Configuration</h1>
+            <p class="page-sub">Manage application parameters and security policy.</p>
+          </div>
+
+          <div class="page-actions">
+            <button class="btn-outline" type="button">Reset to defaults</button>
+            <button class="btn-primary" type="button">Save changes</button>
+          </div>
+        </div>
+
+        <!-- Password policy -->
+        <section class="card panel" style="margin-bottom:12px;">
+          <div class="panel-head">
+            <h2 class="panel-title">Password policy</h2>
+            <span class="muted" style="font-size:13px;">Editable by ADMIN / SUPERADMIN</span>
+          </div>
+
+          <div class="config-grid">
+            <div>
+              <label class="field-label" for="minLen">Minimum length</label>
+              <input id="minLen" type="number" value="8" min="6" max="64">
+            </div>
+
+            <div>
+              <label class="field-label" for="nDigit">Minimum digits (n)</label>
+              <input id="nDigit" type="number" value="1" min="0" max="10">
+            </div>
+
+            <div>
+              <label class="field-label" for="pLower">Minimum lowercase (p)</label>
+              <input id="pLower" type="number" value="1" min="0" max="10">
+            </div>
+
+            <div>
+              <label class="field-label" for="qUpper">Minimum uppercase (q)</label>
+              <input id="qUpper" type="number" value="1" min="0" max="10">
+            </div>
+
+            <div>
+              <label class="field-label" for="rSpec">Minimum special (r)</label>
+              <input id="rSpec" type="number" value="1" min="0" max="10">
+            </div>
+
+            <div>
+              <label class="field-label" for="lockTries">Lock after attempts</label>
+              <input id="lockTries" type="number" value="3" min="1" max="10">
+            </div>
+
+            <div class="wide">
+              <div class="policy-flags">
+                <label class="flag">
+                  <input type="checkbox" checked>
+                  <span>No accents allowed</span>
+                </label>
+
+                <label class="flag">
+                  <input type="checkbox" checked>
+                  <span>Password must not contain username</span>
+                </label>
+
+                <label class="flag">
+                  <input type="checkbox" checked>
+                  <span>Force password change at first login</span>
+                </label>
+
+                <label class="flag">
+                  <input type="checkbox" checked>
+                  <span>SuperAdmin account never locked</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="hint">
+            Allowed special characters: <b>[!"#$%&'()*+,-./:;&lt;=&gt;?@\^_`|}~]</b>
+          </div>
+        </section>
+
+        <!-- Logs retention -->
+        <section class="card panel" style="margin-bottom:12px;">
+          <div class="panel-head">
+            <h2 class="panel-title">Logs</h2>
+            <span class="muted" style="font-size:13px;">Retention and export</span>
+          </div>
+
+          <div class="config-grid">
+            <div>
+              <label class="field-label" for="retention">Retention (days)</label>
+              <input id="retention" type="number" value="30" min="1" max="365">
+            </div>
+
+            <div>
+              <label class="field-label" for="levels">Stored levels</label>
+              <select id="levels">
+                <option selected>INFO + WARNING + ALARM</option>
+                <option>WARNING + ALARM</option>
+                <option>ALARM only</option>
+              </select>
+            </div>
+
+            <div class="wide">
+              <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <button class="btn-outline" type="button">Export CSV</button>
+                <button class="btn-outline" type="button">Purge old logs</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sensor / luminosity -->
+        <section class="card panel">
+          <div class="panel-head">
+            <h2 class="panel-title">Sensor & capture rules</h2>
+            <span class="muted" style="font-size:13px;">Luminosity threshold and automation</span>
+          </div>
+
+          <div class="config-grid">
+            <div>
+              <label class="field-label" for="luxThreshold">Luminosity threshold (lx)</label>
+              <input id="luxThreshold" type="number" value="150" min="0" max="5000">
+            </div>
+
+            <div>
+              <label class="field-label" for="auto24">Auto capture if no photo (hours)</label>
+              <input id="auto24" type="number" value="24" min="1" max="168">
+            </div>
+
+            <div>
+              <label class="field-label" for="minDisk">Minimum free disk (GB)</label>
+              <input id="minDisk" type="number" value="1" min="0" max="100">
+            </div>
+
+            <div>
+              <label class="field-label" for="udp">UDP after capture</label>
+              <select id="udp">
+                <option selected>Enabled</option>
+                <option>Disabled</option>
+              </select>
+            </div>
+
+            <div class="wide">
+              <div class="policy-flags">
+                <label class="flag">
+                  <input type="checkbox" checked>
+                  <span>Check disk space before capture</span>
+                </label>
+
+                <label class="flag">
+                  <input type="checkbox" checked>
+                  <span>Block capture if disk is insufficient</span>
+                </label>
+
+                <label class="flag">
+                  <input type="checkbox" checked>
+                  <span>Trigger alarm when luminosity is under threshold</span>
+                </label>
+
+                <label class="flag">
+                  <input type="checkbox" checked>
+                  <span>Detect sensor failure</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="foot">
+          <span>THALES16 • PHOTO_ATB</span>
+          <span class="muted">Local interface</span>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>
