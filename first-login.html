@@ -1,81 +1,81 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>THALES16 — First Login</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+<!doctype html> <!-- Déclare que ce document est une page HTML5. -->
+<html lang="en"> <!-- Élément racine contenant toute la page de premier login. L'attribut 'lang="en"' définit la langue principale. -->
+<head> <!-- Section d'en-tête contenant les métadonnées et liens vers les ressources externes. -->
+  <meta charset="utf-8"> <!-- Définit l'encodage des caractères en UTF-8 pour supporter tous les caractères spéciaux et accentués. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Assure que la page s'adapte à la taille de l'écran en mode responsive sur tous les appareils. -->
+  <title>THALES16 — First Login</title> <!-- Titre affiché dans l'onglet du navigateur et utilisé par les moteurs de recherche. -->
+  <link rel="stylesheet" href="https://isis.unice.fr/~bi507141/acces/SAE15/assets/css/style.css"> <!-- Importe la feuille de style CSS externe qui contient tous les styles visuels et la mise en page. -->
+</head> <!-- Fin de la section d'en-tête. -->
+<body> <!-- Début du corps du document HTML qui contient tout le contenu visible de la page. -->
 
-  <div class="split">
+  <div class="split"> <!-- Conteneur créant une disposition en deux colonnes : illustration gauche + formulaire droite. -->
 
-    <!-- LEFT (white) -->
-    <section class="split-left">
-      <div class="left-inner">
+    <!-- Colonne gauche avec illustration -->
+    <section class="split-left"> <!-- Section gauche avec fond blanc contenant l'illustration. Cachée sur les petits écrans. -->
+      <div class="left-inner"> <!-- Conteneur interne pour l'illustration. -->
         <img
           class="illustration"
           src="https://www.ucf.edu/wp-content/blogs.dir/19/files/2019/12/how-much-can-you-make-engineering.jpg"
-          alt="THALES16 illustration">
+          alt="THALES16 illustration"> <!-- Image d'illustration affichée sur la gauche pour créer un contexte visuel attrayant. -->
       </div>
     </section>
 
-    <!-- RIGHT (blue) -->
-    <section class="split-right">
-      <div class="login-card">
-        <h1 class="card-title">First login</h1>
-        <p class="card-subtitle">
+    <!-- Colonne droite avec formulaire de changement de mot de passe -->
+    <section class="split-right"> <!-- Section droite avec fond bleu dégradé contenant le formulaire de changement de mot de passe. -->
+      <div class="login-card"> <!-- Carte contenant le formulaire avec fond blanc et ombre. -->
+        <h1 class="card-title">First login</h1> <!-- Titre de la page indiquant qu'il s'agit du premier login. -->
+        <p class="card-subtitle"> <!-- Sous-titre expliquant pourquoi il faut changer le mot de passe. -->
           For security reasons, you must change your password before continuing.
         </p>
 
-        <!-- Optional “policy” hint (maquette) -->
-        <div class="policy-box">
-          <div class="policy-title">Password policy (simulation)</div>
-          <ul class="policy-list">
-            <li>Minimum length: <b>8</b></li>
-            <li>At least <b>1</b> digit, <b>1</b> lowercase, <b>1</b> uppercase, <b>1</b> special</li>
-            <li>No accents, and must not contain your username</li>
+        <div class="policy-box"> <!-- Conteneur affichant les règles de politique de mot de passe en boîte informative. -->
+          <div class="policy-title">Password policy (simulation)</div> <!-- Titre de la boîte de politique. -->
+          <ul class="policy-list"> <!-- Liste non ordonnée des règles de mot de passe. -->
+            <li>Minimum length: <b>8</b></li> <!-- Règle 1 : longueur minimale du mot de passe (8 caractères). -->
+            <li>At least <b>1</b> digit, <b>1</b> lowercase, <b>1</b> uppercase, <b>1</b> special</li> <!-- Règle 2 : types de caractères requis (chiffre, minuscule, majuscule, spécial). -->
+            <li>No accents, and must not contain your username</li> <!-- Règle 3 : restrictions additionnelles (pas d'accents, pas de nom d'utilisateur). -->
           </ul>
         </div>
 
-        <form class="form" action="dashboard.html">
-          <label class="field">
-            <span class="field-label">Current password</span>
-            <div class="input">
-              <span class="icon" aria-hidden="true">🔒</span>
-              <input type="password" placeholder="••••••••" required>
+        <form class="form" action="dashboard.html"> <!-- Formulaire de changement de mot de passe qui envoie vers le tableau de bord une fois validé. -->
+          <label class="field"> <!-- Groupe pour le mot de passe actuel. -->
+            <span class="field-label">Current password</span> <!-- Étiquette pour le champ du mot de passe actuel. -->
+            <div class="input"> <!-- Conteneur du champ de saisie avec icône. -->
+              <span class="icon" aria-hidden="true">🔒</span> <!-- Icône cadenas représentant la sécurité. Cachée des lecteurs d'écran. -->
+              <input type="password" placeholder="••••••••" required> <!-- Champ de saisie pour le mot de passe actuel (type password masque la saisie, obligatoire). -->
             </div>
           </label>
 
-          <label class="field">
-            <span class="field-label">New password</span>
-            <div class="input">
-              <span class="icon" aria-hidden="true">🔑</span>
-              <input type="password" placeholder="Create a new password" required>
+          <label class="field"> <!-- Groupe pour le nouveau mot de passe. -->
+            <span class="field-label">New password</span> <!-- Étiquette pour le champ du nouveau mot de passe. -->
+            <div class="input"> <!-- Conteneur du champ de saisie avec icône. -->
+              <span class="icon" aria-hidden="true">🔑</span> <!-- Icône clé représentant le nouveau mot de passe. Cachée des lecteurs d'écran. -->
+              <input type="password" placeholder="Create a new password" required> <!-- Champ de saisie pour le nouveau mot de passe (type password, obligatoire). -->
             </div>
           </label>
 
-          <label class="field">
-            <span class="field-label">Confirm new password</span>
-            <div class="input">
-              <span class="icon" aria-hidden="true">✅</span>
-              <input type="password" placeholder="Repeat the new password" required>
+          <label class="field"> <!-- Groupe pour la confirmation du nouveau mot de passe. -->
+            <span class="field-label">Confirm new password</span> <!-- Étiquette pour le champ de confirmation. -->
+            <div class="input"> <!-- Conteneur du champ de saisie avec icône. -->
+              <span class="icon" aria-hidden="true">✅</span> <!-- Icône de validation (checkmark). Cachée des lecteurs d'écran. -->
+              <input type="password" placeholder="Repeat the new password" required> <!-- Champ de saisie pour confirmer le nouveau mot de passe (type password, obligatoire). -->
             </div>
           </label>
 
-          <button class="btn-primary" type="submit">Save & Continue</button>
+          <button class="btn-primary" type="submit">Save & Continue</button> <!-- Bouton principal pour sauvegarder le nouveau mot de passe et continuer vers le tableau de bord. -->
 
-          <a class="link-muted" href="login.html">Back to login</a>
+          <a class="link-muted" href="login.html">Back to login</a> <!-- Lien pour retourner à la page de connexion en cas d'erreur. -->
 
-          <div class="small-note">
+          <div class="small-note"> <!-- Conteneur pour une note additionnelle (actuellement vide). -->
           </div>
         </form>
       </div>
 
-      <div class="curves" aria-hidden="true"></div>
+      <div class="curves" aria-hidden="true"></div> <!-- Élément purement décoratif créant des courbes visuelles au bas à droite (caché des lecteurs d'écran). -->
     </section>
 
-  </div>
+  </div> <!-- Fin du conteneur de la disposition en deux colonnes. -->
 
-</body>
-</html>
+</body> <!-- Fin du corps du document. -->
+</html> <!-- Fin du document HTML. -->
+

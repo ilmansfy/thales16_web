@@ -1,134 +1,135 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>THALES16 — Take Photo</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+<!doctype html> <!-- Déclare que ce document est une page HTML5. -->
+<html lang="en"> <!-- Élément racine contenant toute la page de capture de photo. L'attribut 'lang="en"' définit la langue principale. -->
+<head> <!-- Section d'en-tête contenant les métadonnées et liens vers les ressources externes. -->
+  <meta charset="utf-8"> <!-- Définit l'encodage des caractères en UTF-8 pour supporter tous les caractères spéciaux et accentués. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Assure que la page s'adapte à la taille de l'écran en mode responsive sur tous les appareils. -->
+  <title>THALES16 — Take Photo</title> <!-- Titre affiché dans l'onglet du navigateur et utilisé par les moteurs de recherche. -->
+  <link rel="stylesheet" href="https://isis.unice.fr/~bi507141/acces/SAE15/assets/css/style.css"> <!-- Importe la feuille de style CSS externe qui contient tous les styles visuels et la mise en page. -->
+</head> <!-- Fin de la section d'en-tête. -->
+<body> <!-- Début du corps du document HTML qui contient tout le contenu visible de la page. -->
 
-  <div class="app">
-    <!-- Top bar (public access) -->
-    <header class="topbar">
-      <div class="brand">
-        <div class="brand-badge">T16</div>
-        <div>
-          <div class="brand-name">THALES16</div>
-          <div class="brand-sub">PHOTO_ATB — Photo capture (public access)</div>
+  <div class="app"> <!-- Conteneur principal de l'application qui enveloppe toute l'interface utilisateur. -->
+    <!-- Barre supérieure de navigation : affiche la marque et les contrôles utilisateur -->
+    <header class="topbar"> <!-- En-tête fixe en haut de la page contenant la marque et les contrôles principaux. Reste visible lors du défilement. -->
+      <div class="brand"> <!-- Section contenant le logo et le nom de l'application pour identifier la marque. -->
+        <div class="brand-badge">T16</div> <!-- Badge carré contenant l'abréviation de l'application THALES16. -->
+        <div> <!-- Conteneur pour le texte de marque. -->
+          <div class="brand-name">THALES16</div> <!-- Nom complet de l'application affiché en grand. -->
+          <div class="brand-sub">PHOTO_ATB — Photo capture (public access)</div> <!-- Sous-titre indiquant qu'il s'agit de la capture publique sans authentification. -->
         </div>
       </div>
 
-      <div class="topbar-right">
-        <span class="chip">Public</span>
-        <a class="btn-soft" href="login.html">Login</a>
+      <div class="topbar-right"> <!-- Section à droite de la barre supérieure contenant les informations et actions utilisateur. -->
+        <span class="chip">Public</span> <!-- Badge indiquant l'accès public (pas d'utilisateur connecté). -->
+        <a class="btn-soft" href="login.html">Login</a> <!-- Bouton pour se connecter et accéder aux fonctionnalités protégées. -->
       </div>
-    </header>
+    </header> <!-- Fin de la barre supérieure. -->
 
-    <div class="layout">
-      <!-- Sidebar (still available for demo) -->
-      <aside class="sidebar">
-        <a class="side-link" href="dashboard.html">Dashboard</a>
-        <a class="side-link" href="photos.html">Photos</a>
-        <a class="side-link" href="events.html">Events</a>
-        <a class="side-link active" href="take-photo-public.html">Take Photo</a>
+    <div class="layout"> <!-- Conteneur principal qui crée une mise en page en deux colonnes (barre latérale + contenu principal). -->
+      <!-- Barre latérale de navigation : permet de naviguer entre les différentes pages de l'application -->
+      <aside class="sidebar"> <!-- Barre latérale gauche contenant les liens de navigation vers toutes les sections de l'application. -->
+        <a class="side-link" href="dashboard.html">Dashboard</a> <!-- Lien vers le tableau de bord. -->
+        <a class="side-link" href="photos.html">Photos</a> <!-- Lien vers la galerie de photos. -->
+        <a class="side-link" href="events.html">Events</a> <!-- Lien vers la page des événements. -->
+        <a class="side-link active" href="take-photo-public.html">Take Photo</a> <!-- Lien vers la page de capture de photos (page actuelle). L'attribut 'active' change son style. -->
 
-        <div class="side-sep"></div>
+        <div class="side-sep"></div> <!-- Séparateur visuel (ligne horizontale) entre les groupes de navigation. -->
 
-        <a class="side-link" href="users.html">Users</a>
-        <a class="side-link" href="config.html">Configuration</a>
-      </aside>
+        <a class="side-link" href="users.html">Users</a> <!-- Lien vers la page de gestion des utilisateurs. -->
+        <a class="side-link" href="config.html">Configuration</a> <!-- Lien vers la page de configuration du système. -->
+      </aside> <!-- Fin de la barre latérale. -->
 
-      <!-- Main -->
-      <main class="main">
-        <div class="page-head">
-          <div>
-            <h1 class="page-title">Take a photo</h1>
-            <p class="page-sub">Manual capture without authentication.</p>
+      <!-- Contenu principal : interface de capture de photo sans authentification -->
+      <main class="main"> <!-- Zone principale du contenu contenant tous les éléments de la page de capture. -->
+        <div class="page-head"> <!-- En-tête de la page contenant le titre et les boutons d'action. -->
+          <div> <!-- Section gauche avec le titre et la description. -->
+            <h1 class="page-title">Take a photo</h1> <!-- Titre principal de la page affiché en grands caractères. -->
+            <p class="page-sub">Manual capture without authentication.</p> <!-- Sous-titre décrivant que cette page permet de capturer sans authentification. -->
           </div>
 
-          <div class="page-actions">
-            <a class="btn-outline" href="photos.html">Open photos</a>
-            <a class="btn-primary" href="events.html">Open events</a>
+          <div class="page-actions"> <!-- Section droite contenant les boutons d'action principaux. -->
+            <a class="btn-outline" href="photos.html">Open photos</a> <!-- Bouton pour accéder à la galerie de photos. -->
+            <a class="btn-primary" href="events.html">Open events</a> <!-- Bouton pour accéder à la page des événements. -->
           </div>
         </div>
 
-        <section class="grid-capture">
-          <!-- Capture panel -->
-          <div class="card panel">
-            <div class="panel-head">
-              <h2 class="panel-title">Capture control</h2>
-              <span class="badge info">Ready</span>
+        <section class="grid-capture"> <!-- Conteneur créant une mise en page en deux colonnes pour les contrôles et résultats. -->
+          <!-- Panneau de contrôle de capture -->
+          <div class="card panel"> <!-- Panneau contenant les contrôles de capture de photo. -->
+            <div class="panel-head"> <!-- En-tête du panneau. -->
+              <h2 class="panel-title">Capture control</h2> <!-- Titre indiquant qu'il s'agit des contrôles de capture. -->
+              <span class="badge info">Ready</span> <!-- Badge bleu indiquant que le système est prêt à capturer. -->
             </div>
 
-            <div class="capture-box">
-              <div class="capture-icon">📷</div>
-              <div>
-                <div class="capture-title">Capture now</div>
-                <div class="capture-sub">
+            <div class="capture-box"> <!-- Boîte affichant les informations de capture. -->
+              <div class="capture-icon">📷</div> <!-- Icône d'appareil photo pour indiquer la fonction de capture. -->
+              <div> <!-- Conteneur pour le texte d'information. -->
+                <div class="capture-title">Capture now</div> <!-- Titre indiquant l'action de capture. -->
+                <div class="capture-sub"> <!-- Sous-titre décrivant les vérifications effectuées. -->
                   The system checks disk space and reads luminosity before saving.
                 </div>
               </div>
             </div>
 
-            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
-              <button class="btn-primary" type="button">Take photo</button>
-              <button class="btn-outline" type="button">Simulate error</button>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;"> <!-- Conteneur flexbox pour les boutons d'action. -->
+              <button class="btn-primary" type="button">Take photo</button> <!-- Bouton principal pour capturer une photo. -->
+              <button class="btn-outline" type="button">Simulate error</button> <!-- Bouton pour simuler une erreur de capture (à des fins de test). -->
             </div>
 
-            <div class="muted" style="font-size:13px; margin-top:12px;">
-              After capture: metadata archived (timestamp, user/system, luminosity) + UDP message.
+            <div class="muted" style="font-size:13px; margin-top:12px;"> <!-- Texte informatif sur les métadonnées archivées. -->
+              After capture: metadata archived (timestamp, user/system, luminosity) + UDP message. <!-- Description des données sauvegardées après chaque capture. -->
             </div>
           </div>
 
-          <!-- Result panel -->
-          <div class="card panel">
-            <div class="panel-head">
-              <h2 class="panel-title">Result</h2>
-              <a class="link" href="photos.html">View history</a>
+          <!-- Panneau des résultats de capture -->
+          <div class="card panel"> <!-- Panneau affichant les résultats de la capture (succès ou erreur). -->
+            <div class="panel-head"> <!-- En-tête du panneau. -->
+              <h2 class="panel-title">Result</h2> <!-- Titre indiquant qu'il s'agit des résultats. -->
+              <a class="link" href="photos.html">View history</a> <!-- Lien pour accéder à l'historique des photos capturées. -->
             </div>
 
-            <!-- Success message -->
-            <div class="result-box ok">
-              <div class="result-top">
-                <span class="badge ok">SUCCESS</span>
-                <span class="muted" style="font-size:13px;">2026-01-09 18:42</span>
+            <!-- Message de succès -->
+            <div class="result-box ok"> <!-- Boîte de résultat affichant un succès de capture (style vert). -->
+              <div class="result-top"> <!-- En-tête du résultat avec badge et horodatage. -->
+                <span class="badge ok">SUCCESS</span> <!-- Badge vert indiquant une capture réussie. -->
+                <span class="muted" style="font-size:13px;">2026-01-09 18:42</span> <!-- Date et heure de la capture réussie. -->
               </div>
-              <div class="result-title">Photo captured successfully.</div>
-              <div class="result-sub">
-                Luminosity: <b>245 lx</b> • Disk: <b>7.8 GB free</b> • UDP: <b>sent</b>
+              <div class="result-title">Photo captured successfully.</div> <!-- Titre du message de succès. -->
+              <div class="result-sub"> <!-- Sous-titre avec les métadonnées de la capture. -->
+                Luminosity: <b>245 lx</b> • Disk: <b>7.8 GB free</b> • UDP: <b>sent</b> <!-- Données de luminosité, espace disque et statut UDP. -->
               </div>
-              <div style="margin-top:12px;">
-                <a class="btn-mini" href="photo-details.html">Open details</a>
-                <a class="btn-mini" href="events.html">Open related events</a>
+              <div style="margin-top:12px;"> <!-- Conteneur avec les boutons d'action supplémentaires. -->
+                <a class="btn-mini" href="photo-details.html">Open details</a> <!-- Bouton pour voir les détails de la photo capturée. -->
+                <a class="btn-mini" href="events.html">Open related events</a> <!-- Bouton pour voir les événements liés à cette capture. -->
               </div>
             </div>
 
-            <!-- Error message (example) -->
-            <div class="result-box danger" style="margin-top:12px;">
-              <div class="result-top">
-                <span class="badge alarm">ERROR</span>
-                <span class="muted" style="font-size:13px;">2026-01-09 18:40</span>
+            <!-- Message d'erreur (exemple) -->
+            <div class="result-box danger" style="margin-top:12px;"> <!-- Boîte de résultat affichant une erreur de capture (style rouge). -->
+              <div class="result-top"> <!-- En-tête du résultat avec badge et horodatage. -->
+                <span class="badge alarm">ERROR</span> <!-- Badge rouge indiquant une erreur de capture. -->
+                <span class="muted" style="font-size:13px;">2026-01-09 18:40</span> <!-- Date et heure de la tentative échouée. -->
               </div>
-              <div class="result-title">Capture failed.</div>
-              <div class="result-sub">
-                Reason: <b>Insufficient disk space</b>. Photo capture was blocked.
+              <div class="result-title">Capture failed.</div> <!-- Titre du message d'erreur. -->
+              <div class="result-sub"> <!-- Sous-titre avec la raison de l'erreur. -->
+                Reason: <b>Insufficient disk space</b>. Photo capture was blocked. <!-- Raison : espace disque insuffisant. -->
               </div>
-              <div style="margin-top:12px;">
-                <a class="btn-mini" href="events.html">Open events</a>
+              <div style="margin-top:12px;"> <!-- Conteneur avec le bouton d'action supplémentaire. -->
+                <a class="btn-mini" href="events.html">Open events</a> <!-- Bouton pour voir les événements liés à cette erreur. -->
               </div>
             </div>
 
           </div>
         </section>
 
-        <footer class="foot">
-          <span>THALES16 • PHOTO_ATB</span>
-          <span class="muted">Public capture page</span>
-        </footer>
-      </main>
-    </div>
-  </div>
+        <footer class="foot"> <!-- Pied de page affichant les informations de l'application. -->
+          <span>THALES16 • PHOTO_ATB</span> <!-- Nom et identifiant de l'application. -->
+          <span class="muted">Public capture page</span> <!-- Descriptif du type de page (page de capture publique). -->
+        </footer> <!-- Fin du pied de page. -->
+      </main> <!-- Fin du contenu principal. -->
+    </div> <!-- Fin du conteneur layout. -->
+  </div> <!-- Fin du conteneur principal de l'application. -->
 
 </body>
 </html>
+

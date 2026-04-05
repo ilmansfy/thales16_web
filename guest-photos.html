@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>THALES16 — Guest • My Photos</title>
+  <link rel="stylesheet" href="https://isis.unice.fr/~bi507141/acces/SAE15/assets/css/style.css">
+</head>
+<body>
+
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-badge">T16</div>
+        <div>
+          <div class="brand-name">THALES16</div>
+          <div class="brand-sub">PHOTO_ATB — Guest access</div>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <span class="chip">Role: GUEST</span>
+        <a class="btn-soft" href="login.html">Exit</a>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <a class="side-link" href="guest-take-photo.html">Take Photo</a>
+        <a class="side-link active" href="guest-photos.html">My Photos</a>
+
+        <div class="side-sep"></div>
+        <span class="muted" style="display:block; padding:10px 12px; font-size:13px;">
+          Only photos taken by Guest are listed here (mock).
+        </span>
+      </aside>
+
+      <main class="main">
+        <div class="page-head">
+          <div>
+            <h1 class="page-title">My photos</h1>
+            <p class="page-sub">Guest history (restricted view).</p>
+          </div>
+
+          <div class="page-actions">
+            <a class="btn-outline" href="guest-take-photo.html">← Back to capture</a>
+          </div>
+        </div>
+
+        <section class="card panel">
+          <div class="panel-head">
+            <h2 class="panel-title">Guest photo history</h2>
+            <span class="muted" style="font-size:13px;">Only your captures appear here</span>
+          </div>
+
+          <div style="overflow:auto;">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th style="width:160px;">Preview</th>
+                  <th style="width:200px;">Timestamp</th>
+                  <th style="width:120px;">User</th>
+                  <th style="width:140px;">Status</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="thumb">
+                      <span class="thumb-text">IMG</span>
+                    </div>
+                  </td>
+                  <td>2026-01-11 17:10</td>
+                  <td>guest</td>
+                  <td><span class="badge ok">OK</span></td>
+                  <td>Guest capture</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="thumb">
+                      <span class="thumb-text">IMG</span>
+                    </div>
+                  </td>
+                  <td>2026-01-11 16:58</td>
+                  <td>guest</td>
+                  <td><span class="badge info">INFO</span></td>
+                  <td>Guest capture</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="hint">
+            Note: In the final PHP version, the server would filter photos by the guest session identifier.
+          </div>
+        </section>
+
+        <footer class="foot">
+          <span>THALES16 • PHOTO_ATB</span>
+          <span class="muted">Guest mode</span>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>

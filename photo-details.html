@@ -1,178 +1,179 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>THALES16 — Photo Details</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+<!doctype html> <!-- Déclare que ce document est une page HTML5. -->
+<html lang="en"> <!-- Élément racine contenant toute la page de détails de photo. L'attribut 'lang="en"' définit la langue principale. -->
+<head> <!-- Section d'en-tête contenant les métadonnées et liens vers les ressources externes. -->
+  <meta charset="utf-8"> <!-- Définit l'encodage des caractères en UTF-8 pour supporter tous les caractères spéciaux et accentués. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Assure que la page s'adapte à la taille de l'écran en mode responsive sur tous les appareils. -->
+  <title>THALES16 — Photo Details</title> <!-- Titre affiché dans l'onglet du navigateur et utilisé par les moteurs de recherche. -->
+  <link rel="stylesheet" href="https://isis.unice.fr/~bi507141/acces/SAE15/assets/css/style.css"> <!-- Importe la feuille de style CSS externe qui contient tous les styles visuels et la mise en page. -->
+</head> <!-- Fin de la section d'en-tête. -->
+<body> <!-- Début du corps du document HTML qui contient tout le contenu visible de la page. -->
 
-  <div class="app">
-    <!-- Top bar -->
-    <header class="topbar">
-      <div class="brand">
-        <div class="brand-badge">T16</div>
-        <div>
-          <div class="brand-name">THALES16</div>
-          <div class="brand-sub">PHOTO_ATB — Local Web Interface</div>
+  <div class="app"> <!-- Conteneur principal de l'application qui enveloppe toute l'interface utilisateur. -->
+    <!-- Barre supérieure de navigation : affiche la marque et les contrôles utilisateur -->
+    <header class="topbar"> <!-- En-tête fixe en haut de la page contenant la marque et les contrôles principaux. Reste visible lors du défilement. -->
+      <div class="brand"> <!-- Section contenant le logo et le nom de l'application pour identifier la marque. -->
+        <div class="brand-badge">T16</div> <!-- Badge carré contenant l'abréviation de l'application THALES16. -->
+        <div> <!-- Conteneur pour le texte de marque. -->
+          <div class="brand-name">THALES16</div> <!-- Nom complet de l'application affiché en grand. -->
+          <div class="brand-sub">PHOTO_ATB — Local Web Interface</div> <!-- Sous-titre décrivant la fonction (interface web locale) du système. -->
         </div>
       </div>
 
-      <div class="topbar-right">
-        <span class="chip">Role: ADMIN</span>
-        <a class="btn-soft" href="login.html">Logout</a>
+      <div class="topbar-right"> <!-- Section à droite de la barre supérieure contenant les informations et actions utilisateur. -->
+        <span class="chip">Role: ADMIN</span> <!-- Badge affichant le rôle actuel de l'utilisateur connecté (ici ADMIN pour la maquette). -->
+        <a class="btn-soft" href="login.html">Logout</a> <!-- Bouton de déconnexion qui redirige vers la page de connexion. -->
       </div>
-    </header>
+    </header> <!-- Fin de la barre supérieure. -->
 
-    <div class="layout">
-      <!-- Sidebar -->
-      <aside class="sidebar">
-        <a class="side-link" href="dashboard.html">Dashboard</a>
-        <a class="side-link active" href="photos.html">Photos</a>
-        <a class="side-link" href="events.html">Events</a>
-        <a class="side-link" href="take-photo-public.html">Take Photo</a>
+    <div class="layout"> <!-- Conteneur principal qui crée une mise en page en deux colonnes (barre latérale + contenu principal). -->
+      <!-- Barre latérale de navigation : permet de naviguer entre les différentes pages de l'application -->
+      <aside class="sidebar"> <!-- Barre latérale gauche contenant les liens de navigation vers toutes les sections de l'application. -->
+        <a class="side-link" href="dashboard.html">Dashboard</a> <!-- Lien vers le tableau de bord. -->
+        <a class="side-link active" href="photos.html">Photos</a> <!-- Lien vers la galerie de photos (page parente de cette page). L'attribut 'active' change son style. -->
+        <a class="side-link" href="events.html">Events</a> <!-- Lien vers la page des événements. -->
+        <a class="side-link" href="take-photo-public.html">Take Photo</a> <!-- Lien vers la page de capture de photos. -->
 
-        <div class="side-sep"></div>
+        <div class="side-sep"></div> <!-- Séparateur visuel (ligne horizontale) entre les groupes de navigation. -->
 
-        <a class="side-link" href="users.html">Users</a>
-        <a class="side-link" href="config.html">Configuration</a>
-      </aside>
+        <a class="side-link" href="users.html">Users</a> <!-- Lien vers la page de gestion des utilisateurs. -->
+        <a class="side-link" href="config.html">Configuration</a> <!-- Lien vers la page de configuration du système. -->
+      </aside> <!-- Fin de la barre latérale. -->
 
-      <!-- Main -->
-      <main class="main">
-        <div class="page-head">
-          <div>
-            <h1 class="page-title">Photo details</h1>
-            <p class="page-sub">Preview and metadata associated with this capture.</p>
+      <!-- Contenu principal : affiche les détails de la photo sélectionnée -->
+      <main class="main"> <!-- Zone principale du contenu contenant tous les éléments de la page des détails de photo. -->
+        <div class="page-head"> <!-- En-tête de la page contenant le titre et les boutons d'action. -->
+          <div> <!-- Section gauche avec le titre et la description. -->
+            <h1 class="page-title">Photo details</h1> <!-- Titre principal de la page affiché en grands caractères. -->
+            <p class="page-sub">Preview and metadata associated with this capture.</p> <!-- Sous-titre décrivant le contenu de la page (aperçu et métadonnées). -->
           </div>
 
-          <div class="page-actions">
-            <a class="btn-outline" href="photos.html">← Back to photos</a>
-            <a class="btn-outline danger-outline" href="#">Delete photo</a>
+          <div class="page-actions"> <!-- Section droite contenant les boutons d'action principaux. -->
+            <a class="btn-outline" href="photos.html">← Back to photos</a> <!-- Bouton pour retourner à la galerie de photos. -->
+            <a class="btn-outline danger-outline" href="#">Delete photo</a> <!-- Bouton pour supprimer la photo (styled en rouge pour indiquer une action dangereuse). -->
           </div>
         </div>
 
-        <section class="grid-photo">
-          <!-- Preview -->
-          <div class="card panel">
-            <div class="panel-head">
-              <h2 class="panel-title">Preview</h2>
-              <span class="badge ok">OK</span>
+        <section class="grid-photo"> <!-- Conteneur créant une mise en page en deux colonnes pour aperçu et métadonnées. -->
+          <!-- Aperçu de la photo -->
+          <div class="card panel"> <!-- Panneau contenant l'aperçu de la photo avec style en carte. -->
+            <div class="panel-head"> <!-- En-tête du panneau. -->
+              <h2 class="panel-title">Preview</h2> <!-- Titre indiquant qu'il s'agit d'un aperçu. -->
+              <span class="badge ok">OK</span> <!-- Badge vert indiquant que la photo est en bon état. -->
             </div>
 
-            <div class="photo-preview">
-                <img src="https://www.sbg-systems.com/wp-content/uploads/Satellite-positioning-systems-navigation-1024x768.webp" alt="Photo preview" class="photo-full">
+            <div class="photo-preview"> <!-- Conteneur pour l'image de la photo. -->
+                <img src="https://www.sbg-systems.com/wp-content/uploads/Satellite-positioning-systems-navigation-1024x768.webp" alt="Photo preview" class="photo-full"> <!-- Image de la photo avec classe pour la mise en forme (responsive, couverture complète). -->
             </div>
 
-            <div class="muted" style="font-size:13px; margin-top:10px;">
-              File: <b>2026-01-09_1842.jpg</b>
+            <div class="muted" style="font-size:13px; margin-top:10px;"> <!-- Conteneur affichant le nom du fichier en texte grisé. -->
+              File: <b>2026-01-09_1842.jpg</b> <!-- Nom du fichier de la photo (format : date_heure.jpg). -->
             </div>
           </div>
 
-          <!-- Metadata -->
-          <div class="card panel">
-            <div class="panel-head">
-              <h2 class="panel-title">Metadata</h2>
-              <a class="link" href="events.html">Open events</a>
+          <!-- Métadonnées de la photo -->
+          <div class="card panel"> <!-- Panneau contenant toutes les métadonnées associées à la photo. -->
+            <div class="panel-head"> <!-- En-tête du panneau. -->
+              <h2 class="panel-title">Metadata</h2> <!-- Titre indiquant qu'il s'agit des métadonnées. -->
+              <a class="link" href="events.html">Open events</a> <!-- Lien pour accéder à la page des événements liés. -->
             </div>
 
-            <div class="meta-grid">
-              <div class="meta-item">
-                <div class="meta-label">Timestamp</div>
-                <div class="meta-value">2026-01-09 18:42:11</div>
+            <div class="meta-grid"> <!-- Grille affichant les métadonnées en deux colonnes. -->
+              <div class="meta-item"> <!-- Élément de métadonnée : Timestamp. -->
+                <div class="meta-label">Timestamp</div> <!-- Étiquette : date et heure. -->
+                <div class="meta-value">2026-01-09 18:42:11</div> <!-- Valeur : date et heure exacte de la capture. -->
               </div>
 
-              <div class="meta-item">
-                <div class="meta-label">Captured by</div>
-                <div class="meta-value">admin01</div>
+              <div class="meta-item"> <!-- Élément de métadonnée : Captured by. -->
+                <div class="meta-label">Captured by</div> <!-- Étiquette : utilisateur ayant capturé la photo. -->
+                <div class="meta-value">admin01</div> <!-- Valeur : nom d'utilisateur (admin01). -->
               </div>
 
-              <div class="meta-item">
-                <div class="meta-label">Profile</div>
-                <div class="meta-value">ADMIN</div>
+              <div class="meta-item"> <!-- Élément de métadonnée : Profile. -->
+                <div class="meta-label">Profile</div> <!-- Étiquette : profil/rôle de l'utilisateur. -->
+                <div class="meta-value">ADMIN</div> <!-- Valeur : rôle de l'utilisateur (ADMIN). -->
               </div>
 
-              <div class="meta-item">
-                <div class="meta-label">Luminosity</div>
-                <div class="meta-value">245 lx</div>
+              <div class="meta-item"> <!-- Élément de métadonnée : Luminosity. -->
+                <div class="meta-label">Luminosity</div> <!-- Étiquette : niveau de luminosité lors de la capture. -->
+                <div class="meta-value">245 lx</div> <!-- Valeur : niveau de luminosité en lux (245 lux). -->
               </div>
 
-              <div class="meta-item">
-                <div class="meta-label">Storage check</div>
-                <div class="meta-value"><span class="badge ok">OK</span></div>
+              <div class="meta-item"> <!-- Élément de métadonnée : Storage check. -->
+                <div class="meta-label">Storage check</div> <!-- Étiquette : vérification de l'espace disque. -->
+                <div class="meta-value"><span class="badge ok">OK</span></div> <!-- Valeur : badge vert indiquant que l'espace disque était suffisant. -->
               </div>
 
-              <div class="meta-item">
-                <div class="meta-label">Capture mode</div>
-                <div class="meta-value">Manual</div>
+              <div class="meta-item"> <!-- Élément de métadonnée : Capture mode. -->
+                <div class="meta-label">Capture mode</div> <!-- Étiquette : mode de capture utilisé. -->
+                <div class="meta-value">Manual</div> <!-- Valeur : mode manuel (l'utilisateur a déclenché manuellement la capture). -->
               </div>
 
-              <div class="meta-item">
-                <div class="meta-label">UDP message</div>
-                <div class="meta-value"><span class="badge info">Sent</span></div>
+              <div class="meta-item"> <!-- Élément de métadonnée : UDP message. -->
+                <div class="meta-label">UDP message</div> <!-- Étiquette : envoi du message UDP après capture. -->
+                <div class="meta-value"><span class="badge info">Sent</span></div> <!-- Valeur : badge bleu indiquant que le message UDP a été envoyé. -->
               </div>
 
-              <div class="meta-item">
-                <div class="meta-label">Notes</div>
-                <div class="meta-value">Saved with metadata successfully.</div>
+              <div class="meta-item"> <!-- Élément de métadonnée : Notes. -->
+                <div class="meta-label">Notes</div> <!-- Étiquette : notes additionnelles. -->
+                <div class="meta-value">Saved with metadata successfully.</div> <!-- Valeur : message de confirmation de la sauvegarde. -->
               </div>
             </div>
           </div>
         </section>
 
-        <!-- Related events -->
-        <section class="card panel" style="margin-top:12px;">
-          <div class="panel-head">
-            <h2 class="panel-title">Related events</h2>
-            <span class="muted" style="font-size:13px;">Events around this capture timestamp</span>
+        <!-- Section des événements liés à cette photo -->
+        <section class="card panel" style="margin-top:12px;"> <!-- Conteneur pour le tableau des événements liés à cette capture avec espacement supérieur. -->
+          <div class="panel-head"> <!-- En-tête du panneau. -->
+            <h2 class="panel-title">Related events</h2> <!-- Titre indiquant qu'il s'agit des événements liés à cette capture. -->
+            <span class="muted" style="font-size:13px;">Events around this capture timestamp</span> <!-- Sous-titre expliquant que ce sont les événements proches de l'heure de capture. -->
           </div>
 
-          <div style="overflow:auto;">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th style="width:180px;">Timestamp</th>
-                  <th style="width:110px;">Type</th>
-                  <th style="width:140px;">User</th>
-                  <th style="width:160px;">Action</th>
-                  <th>Description</th>
+          <div style="overflow:auto;"> <!-- Conteneur avec défilement horizontal pour le tableau sur petits écrans. -->
+            <table class="table"> <!-- Tableau HTML pour afficher les événements liés. -->
+              <thead> <!-- En-tête du tableau avec les noms des colonnes. -->
+                <tr> <!-- Ligne du tableau contenant les titres des colonnes. -->
+                  <th style="width:180px;">Timestamp</th> <!-- Colonne 1 : Date et heure de l'événement (largeur fixe 180px). -->
+                  <th style="width:110px;">Type</th> <!-- Colonne 2 : Type d'événement (INFO, WARNING, ALARM) - largeur fixe 110px. -->
+                  <th style="width:140px;">User</th> <!-- Colonne 3 : Utilisateur ayant déclenché l'événement - largeur fixe 140px. -->
+                  <th style="width:160px;">Action</th> <!-- Colonne 4 : Code de l'action effectuée - largeur fixe 160px. -->
+                  <th>Description</th> <!-- Colonne 5 : Description détaillée de l'événement - largeur flexible. -->
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>2026-01-09 18:42</td>
-                  <td><span class="badge info">INFO</span></td>
-                  <td>admin01</td>
-                  <td>TAKE_PHOTO_OK</td>
-                  <td>Photo captured successfully and archived.</td>
+              <tbody> <!-- Corps du tableau contenant les données des événements liés. -->
+                <tr> <!-- Ligne 1 : Photo capturée avec succès. -->
+                  <td>2026-01-09 18:42</td> <!-- Date et heure de l'événement (capture). -->
+                  <td><span class="badge info">INFO</span></td> <!-- Badge de type INFO (information) en bleu. -->
+                  <td>admin01</td> <!-- Utilisateur qui a déclenché la capture. -->
+                  <td>TAKE_PHOTO_OK</td> <!-- Code de l'action : photo prise avec succès. -->
+                  <td>Photo captured successfully and archived.</td> <!-- Description : la photo a été capturée et archivée. -->
                 </tr>
-                <tr>
-                  <td>2026-01-09 18:42</td>
-                  <td><span class="badge info">INFO</span></td>
-                  <td>system</td>
-                  <td>UDP_SENT</td>
-                  <td>UDP message sent after capture.</td>
+                <tr> <!-- Ligne 2 : Message UDP envoyé après capture. -->
+                  <td>2026-01-09 18:42</td> <!-- Date et heure de l'événement (même que la capture). -->
+                  <td><span class="badge info">INFO</span></td> <!-- Badge de type INFO en bleu. -->
+                  <td>system</td> <!-- Événement généré automatiquement par le système. -->
+                  <td>UDP_SENT</td> <!-- Code de l'action : message UDP envoyé. -->
+                  <td>UDP message sent after capture.</td> <!-- Description : message UDP envoyé automatiquement après la capture. -->
                 </tr>
-                <tr>
-                  <td>2026-01-09 18:41</td>
-                  <td><span class="badge warn">WARNING</span></td>
-                  <td>system</td>
-                  <td>LUX_NEAR_THRESHOLD</td>
-                  <td>Luminosity close to configured threshold.</td>
+                <tr> <!-- Ligne 3 : Luminosité proche du seuil configuré. -->
+                  <td>2026-01-09 18:41</td> <!-- Date et heure de l'événement (1 minute avant la capture). -->
+                  <td><span class="badge warn">WARNING</span></td> <!-- Badge de type WARNING (avertissement) en orange. -->
+                  <td>system</td> <!-- Événement généré automatiquement par le système. -->
+                  <td>LUX_NEAR_THRESHOLD</td> <!-- Code de l'action : luminosité près du seuil configuré. -->
+                  <td>Luminosity close to configured threshold.</td> <!-- Description : la luminosité approchait du seuil configuré au moment de la capture. -->
                 </tr>
               </tbody>
             </table>
           </div>
         </section>
 
-        <footer class="foot">
-          <span>THALES16 • PHOTO_ATB</span>
-          <span class="muted">Local interface</span>
-        </footer>
-      </main>
-    </div>
-  </div>
+        <footer class="foot"> <!-- Pied de page affichant les informations de l'application. -->
+          <span>THALES16 • PHOTO_ATB</span> <!-- Nom et identifiant de l'application. -->
+          <span class="muted">Local interface</span> <!-- Descriptif du type d'interface (interface locale). -->
+        </footer> <!-- Fin du pied de page. -->
+      </main> <!-- Fin du contenu principal. -->
+    </div> <!-- Fin du conteneur layout. -->
+  </div> <!-- Fin du conteneur principal de l'application. -->
 
 </body>
 </html>
+

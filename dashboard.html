@@ -1,200 +1,201 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>THALES16 — Dashboard</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+<!doctype html> <!-- Déclare que ce document est une page HTML5. -->
+<html lang="en"> <!-- Élément racine contenant toute la page du tableau de bord. L'attribut 'lang="en"' définit la langue principale. -->
+<head> <!-- Section d'en-tête contenant les métadonnées et liens vers les ressources externes. -->
+  <meta charset="utf-8"> <!-- Définit l'encodage des caractères en UTF-8 pour supporter tous les caractères spéciaux et accentués. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Assure que la page s'adapte à la taille de l'écran en mode responsive sur tous les appareils. -->
+  <title>THALES16 — Dashboard</title> <!-- Titre affiché dans l'onglet du navigateur et utilisé par les moteurs de recherche. -->
+  <link rel="stylesheet" href="https://isis.unice.fr/~bi507141/acces/SAE15/assets/css/style.css"> <!-- Importe la feuille de style CSS externe qui contient tous les styles visuels et la mise en page. -->
+</head> <!-- Fin de la section d'en-tête. -->
+<body> <!-- Début du corps du document HTML qui contient tout le contenu visible de la page. -->
 
-  <div class="app">
-    <!-- Top bar -->
-    <header class="topbar">
-      <div class="brand">
-        <div class="brand-badge">T16</div>
-        <div>
-          <div class="brand-name">THALES16</div>
-          <div class="brand-sub">PHOTO_ATB — Local Web Interface</div>
+  <div class="app"> <!-- Conteneur principal de l'application qui enveloppe toute l'interface utilisateur. -->
+    <!-- Barre supérieure de navigation : affiche la marque et les contrôles utilisateur -->
+    <header class="topbar"> <!-- En-tête fixe en haut de la page contenant la marque et les contrôles principaux. Reste visible lors du défilement. -->
+      <div class="brand"> <!-- Section contenant le logo et le nom de l'application pour identifier la marque. -->
+        <div class="brand-badge">T16</div> <!-- Badge carré contenant l'abréviation de l'application THALES16. -->
+        <div> <!-- Conteneur pour le texte de marque. -->
+          <div class="brand-name">THALES16</div> <!-- Nom complet de l'application affiché en grand. -->
+          <div class="brand-sub">PHOTO_ATB — Local Interface Web</div> <!-- Sous-titre décrivant la fonction (interface web locale) du système. -->
         </div>
       </div>
 
-      <div class="topbar-right">
-        <span class="chip">Role: ADMIN</span>
-        <a class="btn-soft" href="login.html">Logout</a>
+      <div class="topbar-right"> <!-- Section à droite de la barre supérieure contenant les informations et actions utilisateur. -->
+        <span class="chip">Role: ADMIN</span> <!-- Badge affichant le rôle actuel de l'utilisateur connecté (ici ADMIN pour la maquette). -->
+        <a class="btn-soft" href="login.html">Logout</a> <!-- Bouton de déconnexion qui redirige vers la page de connexion. -->
       </div>
-    </header>
+    </header> <!-- Fin de la barre supérieure. -->
 
-    <!-- Layout -->
-    <div class="layout">
-      <!-- Sidebar -->
-      <aside class="sidebar">
-        <a class="side-link active" href="dashboard.html">Dashboard</a>
-        <a class="side-link" href="photos.html">Photos</a>
-        <a class="side-link" href="events.html">Events</a>
-        <a class="side-link" href="take-photo-public.html">Take Photo</a>
+    <!-- Mise en page principale : combine la barre latérale et le contenu principal -->
+    <div class="layout"> <!-- Conteneur principal qui crée une mise en page en deux colonnes (barre latérale + contenu principal). -->
+      <!-- Barre latérale de navigation : permet de naviguer entre les différentes pages de l'application -->
+      <aside class="sidebar"> <!-- Barre latérale gauche contenant les liens de navigation vers toutes les sections de l'application. -->
+        <a class="side-link active" href="dashboard.html">Dashboard</a> <!-- Lien vers le tableau de bord (page actuelle). L'attribut 'active' change son style. -->
+        <a class="side-link" href="photos.html">Photos</a> <!-- Lien vers la galerie de photos. -->
+        <a class="side-link" href="events.html">Events</a> <!-- Lien vers la page des événements. -->
+        <a class="side-link" href="take-photo-public.html">Take Photo</a> <!-- Lien vers la page de capture de photos. -->
 
-        <div class="side-sep"></div>
+        <div class="side-sep"></div> <!-- Séparateur visuel (ligne horizontale) entre les groupes de navigation. -->
 
-        <a class="side-link" href="users.html">Users</a>
-        <a class="side-link" href="config.html">Configuration</a>
-      </aside>
+        <a class="side-link" href="users.html">Users</a> <!-- Lien vers la page de gestion des utilisateurs. -->
+        <a class="side-link" href="config.html">Configuration</a> <!-- Lien vers la page de configuration du système. -->
+      </aside> <!-- Fin de la barre latérale. -->
 
-      <!-- Main -->
-      <main class="main">
-        <div class="page-head">
-          <div>
-            <h1 class="page-title">Dashboard</h1>
-            <p class="page-sub">Overview of system status and recent activity.</p>
+      <!-- Contenu principal du tableau de bord : affiche les indicateurs clés et les actions rapides -->
+      <main class="main"> <!-- Zone principale du contenu contenant tous les éléments du tableau de bord. -->
+        <div class="page-head"> <!-- En-tête de la page contenant le titre et les boutons d'action. -->
+          <div> <!-- Section gauche avec le titre et la description. -->
+            <h1 class="page-title">Dashboard</h1> <!-- Titre principal de la page affiché en grands caractères. -->
+            <p class="page-sub">Overview of system status and recent activity</p> <!-- Sous-titre décrivant le contenu de la page. -->
           </div>
-          <div class="page-actions">
-            <a class="btn-outline" href="take-photo-public.html">Take photo</a>
-            <a class="btn-primary" href="photos.html">Browse photos</a>
+          <div class="page-actions"> <!-- Section droite contenant les boutons d'action principaux. -->
+            <a class="btn-outline" href="take-photo-public.html">Take Photo</a> <!-- Bouton pour accéder directement à la page de prise de photo. -->
+            <a class="btn-primary" href="photos.html">Browse Photos</a> <!-- Bouton principal pour accéder à la galerie de photos. -->
           </div>
         </div>
 
-        <!-- Cards -->
-        <section class="cards">
-          <article class="kpi card">
-            <div class="kpi-top">
-              <div>
-                <div class="kpi-title">Last photo</div>
-                <div class="kpi-value">2026-01-09 18:42</div>
+        <!-- Section KPI : affiche les indicateurs clés de performance du système -->
+        <section class="cards"> <!-- Conteneur pour les cartes d'indicateurs (KPI = Key Performance Indicators). -->
+          <article class="kpi card"> <!-- Carte KPI 1 : Dernière photo. -->
+            <div class="kpi-top"> <!-- En-tête de la carte contenant le titre, la valeur et le statut. -->
+              <div> <!-- Section gauche avec le titre et la valeur. -->
+                <div class="kpi-title">Last photo</div> <!-- Titre du KPI. -->
+                <div class="kpi-value">2026-01-09 18:42</div> <!-- Valeur principale : date et heure de la dernière photo. -->
               </div>
-              <span class="badge ok">OK</span>
+              <span class="badge ok">OK</span> <!-- Badge indiquant le statut (OK = succès). -->
             </div>
-            <div class="kpi-meta">Luminosity: <b>245 lx</b> • Saved with metadata</div>
+            <div class="kpi-meta">Luminosity: <b>245 lx</b> • Saved with metadata</div> <!-- Métadonnées additionnelles : luminosité et confirmation de la sauvegarde. -->
           </article>
 
-          <article class="kpi card">
-            <div class="kpi-top">
-              <div>
-                <div class="kpi-title">Storage</div>
-                <div class="kpi-value">7.8 GB free</div>
+          <article class="kpi card"> <!-- Carte KPI 2 : Espace de stockage disponible. -->
+            <div class="kpi-top"> <!-- En-tête de la carte. -->
+              <div> <!-- Section gauche avec le titre et la valeur. -->
+                <div class="kpi-title">Storage</div> <!-- Titre du KPI. -->
+                <div class="kpi-value">7.8 GB free</div> <!-- Valeur principale : espace disque libre. -->
               </div>
-              <span class="badge info">Info</span>
+              <span class="badge info">Info</span> <!-- Badge informatif. -->
             </div>
-            <div class="kpi-meta">Disk check before capture enabled</div>
+            <div class="kpi-meta">Disk check before capture enabled</div> <!-- Métadonnées : indication que la vérification de disque est activée. -->
           </article>
 
-          <article class="kpi card">
-            <div class="kpi-top">
-              <div>
-                <div class="kpi-title">Luminosity sensor</div>
-                <div class="kpi-value">Status: Stable</div>
+          <article class="kpi card"> <!-- Carte KPI 3 : Statut du capteur de luminosité. -->
+            <div class="kpi-top"> <!-- En-tête de la carte. -->
+              <div> <!-- Section gauche avec le titre et la valeur. -->
+                <div class="kpi-title">Luminosity sensor</div> <!-- Titre du KPI. -->
+                <div class="kpi-value">Status: Stable</div> <!-- Valeur principale : statut du capteur. -->
               </div>
-              <span class="badge ok">OK</span>
+              <span class="badge ok">OK</span> <!-- Badge indiquant le statut OK. -->
             </div>
-            <div class="kpi-meta">Threshold: <b>150 lx</b></div>
+            <div class="kpi-meta">Threshold: <b>150 lx</b></div> <!-- Métadonnées : valeur du seuil de luminosité. -->
           </article>
 
-          <article class="kpi card">
-            <div class="kpi-top">
-              <div>
-                <div class="kpi-title">Events (24h)</div>
-                <div class="kpi-value">12 records</div>
+          <article class="kpi card"> <!-- Carte KPI 4 : Nombre d'événements sur 24 heures. -->
+            <div class="kpi-top"> <!-- En-tête de la carte. -->
+              <div> <!-- Section gauche avec le titre et la valeur. -->
+                <div class="kpi-title">Events (24h)</div> <!-- Titre du KPI. -->
+                <div class="kpi-value">12 records</div> <!-- Valeur principale : nombre d'événements. -->
               </div>
-              <span class="badge warn">Warning</span>
+              <span class="badge warn">Warning</span> <!-- Badge indiquant un avertissement. -->
             </div>
-            <div class="kpi-meta">1 warning detected in last 24 hours</div>
+            <div class="kpi-meta">1 warning detected in last 24 hours</div> <!-- Métadonnées : détail du nombre d'avertissements. -->
           </article>
         </section>
 
-        <!-- Two columns -->
-        <section class="grid2">
-          <div class="card panel">
-            <div class="panel-head">
-              <h2 class="panel-title">Quick actions</h2>
-              <a class="link" href="#">View all</a>
+        <!-- Disposition en deux colonnes : actions rapides + événements récents -->
+        <section class="grid2"> <!-- Conteneur créant une mise en page en deux colonnes pour les sections suivantes. -->
+          <div class="card panel"> <!-- Première colonne : Panneau des actions rapides. -->
+            <div class="panel-head"> <!-- En-tête du panneau. -->
+              <h2 class="panel-title">Quick actions</h2> <!-- Titre du panneau. -->
+              <a class="link" href="#">View all</a> <!-- Lien pour voir toutes les actions disponibles. -->
             </div>
 
-            <div class="actions">
-              <a class="action-tile" href="take-photo-public.html">
-                <div class="action-emoji">📷</div>
-                <div>
-                  <div class="action-title">Take photo</div>
-                  <div class="action-sub">Manual capture</div>
+            <div class="actions"> <!-- Conteneur pour les tuiles d'action. -->
+              <a class="action-tile" href="take-photo-public.html"> <!-- Tuile 1 : Prendre une photo. -->
+                <div class="action-emoji">📷</div> <!-- Emoji pour l'action (appareil photo). -->
+                <div> <!-- Conteneur pour le texte. -->
+                  <div class="action-title">Take photo</div> <!-- Titre de l'action. -->
+                  <div class="action-sub">Manual capture</div> <!-- Sous-titre décrivant l'action. -->
                 </div>
               </a>
 
-              <a class="action-tile" href="photos.html">
-                <div class="action-emoji">🗂️</div>
-                <div>
-                  <div class="action-title">Photos</div>
-                  <div class="action-sub">History and metadata</div>
+              <a class="action-tile" href="photos.html"> <!-- Tuile 2 : Accéder à la galerie de photos. -->
+                <div class="action-emoji">🗂️</div> <!-- Emoji pour l'action (dossier). -->
+                <div> <!-- Conteneur pour le texte. -->
+                  <div class="action-title">Photos</div> <!-- Titre de l'action. -->
+                  <div class="action-sub">History and metadata</div> <!-- Sous-titre décrivant l'action. -->
                 </div>
               </a>
 
-              <a class="action-tile" href="users.html">
-                <div class="action-emoji">👤</div>
-                <div>
-                  <div class="action-title">Users</div>
-                  <div class="action-sub">Add, remove, unlock</div>
+              <a class="action-tile" href="users.html"> <!-- Tuile 3 : Gérer les utilisateurs. -->
+                <div class="action-emoji">👤</div> <!-- Emoji pour l'action (utilisateur). -->
+                <div> <!-- Conteneur pour le texte. -->
+                  <div class="action-title">Users</div> <!-- Titre de l'action. -->
+                  <div class="action-sub">Add, remove, unlock</div> <!-- Sous-titre décrivant l'action. -->
                 </div>
               </a>
 
-              <a class="action-tile" href="config.html">
-                <div class="action-emoji">⚙️</div>
-                <div>
-                  <div class="action-title">Configuration</div>
-                  <div class="action-sub">Password policy, thresholds</div>
+              <a class="action-tile" href="config.html"> <!-- Tuile 4 : Accéder à la configuration. -->
+                <div class="action-emoji">⚙️</div> <!-- Emoji pour l'action (engrenage). -->
+                <div> <!-- Conteneur pour le texte. -->
+                  <div class="action-title">Configuration</div> <!-- Titre de l'action. -->
+                  <div class="action-sub">Password policy, thresholds</div> <!-- Sous-titre décrivant l'action. -->
                 </div>
               </a>
             </div>
           </div>
 
-          <div class="card panel">
-            <div class="panel-head">
-              <h2 class="panel-title">Latest events</h2>
-              <a class="link" href="events.html">Open events</a>
+          <div class="card panel"> <!-- Deuxième colonne : Panneau des événements récents. -->
+            <div class="panel-head"> <!-- En-tête du panneau. -->
+              <h2 class="panel-title">Latest events</h2> <!-- Titre du panneau affichant les événements les plus récents. -->
+              <a class="link" href="events.html">Open events</a> <!-- Lien pour ouvrir la page complète des événements. -->
             </div>
 
-            <table class="table">
-              <thead>
-                <tr>
-                  <th style="width:180px;">Timestamp</th>
-                  <th style="width:110px;">Type</th>
-                  <th style="width:140px;">User</th>
-                  <th>Description</th>
+            <table class="table"> <!-- Tableau affichant les événements récents. -->
+              <thead> <!-- En-tête du tableau avec les colonnes. -->
+                <tr> <!-- Ligne du tableau. -->
+                  <th style="width:180px;">Timestamp</th> <!-- Colonne 1 : Date et heure de l'événement. -->
+                  <th style="width:110px;">Type</th> <!-- Colonne 2 : Type d'événement (INFO, WARNING, ALARM). -->
+                  <th style="width:140px;">User</th> <!-- Colonne 3 : Utilisateur ayant déclenché l'événement. -->
+                  <th>Description</th> <!-- Colonne 4 : Description détaillée de l'événement. -->
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>2026-01-09 18:42</td>
-                  <td><span class="badge info">INFO</span></td>
-                  <td>admin01</td>
-                  <td>Photo captured successfully.</td>
+              <tbody> <!-- Corps du tableau contenant les données. -->
+                <tr> <!-- Ligne 1 : Photo capturée avec succès. -->
+                  <td>2026-01-09 18:42</td> <!-- Date et heure de l'événement. -->
+                  <td><span class="badge info">INFO</span></td> <!-- Badge indiquant que c'est une information. -->
+                  <td>admin01</td> <!-- Utilisateur qui a déclenché l'action. -->
+                  <td>Photo captured successfully.</td> <!-- Description de l'événement. -->
                 </tr>
-                <tr>
-                  <td>2026-01-09 18:41</td>
-                  <td><span class="badge warn">WARNING</span></td>
-                  <td>system</td>
-                  <td>Luminosity close to threshold.</td>
+                <tr> <!-- Ligne 2 : Luminosité proche du seuil. -->
+                  <td>2026-01-09 18:41</td> <!-- Date et heure de l'événement. -->
+                  <td><span class="badge warn">WARNING</span></td> <!-- Badge indiquant un avertissement. -->
+                  <td>system</td> <!-- Événement généré par le système. -->
+                  <td>Luminosity close to threshold.</td> <!-- Description de l'événement. -->
                 </tr>
-                <tr>
-                  <td>2026-01-09 10:12</td>
-                  <td><span class="badge info">INFO</span></td>
-                  <td>operateur07</td>
-                  <td>User logged in.</td>
+                <tr> <!-- Ligne 3 : Utilisateur connecté. -->
+                  <td>2026-01-09 10:12</td> <!-- Date et heure de l'événement. -->
+                  <td><span class="badge info">INFO</span></td> <!-- Badge indiquant une information. -->
+                  <td>operateur07</td> <!-- Utilisateur qui s'est connecté. -->
+                  <td>User logged in.</td> <!-- Description de l'événement. -->
                 </tr>
-                <tr>
-                  <td>2026-01-09 08:02</td>
-                  <td><span class="badge alarm">ALARM</span></td>
-                  <td>system</td>
-                  <td>Sensor failure detected (no signal).</td>
+                <tr> <!-- Ligne 4 : Défaillance du capteur. -->
+                  <td>2026-01-09 08:02</td> <!-- Date et heure de l'événement. -->
+                  <td><span class="badge alarm">ALARM</span></td> <!-- Badge indiquant une alarme critique. -->
+                  <td>system</td> <!-- Événement généré par le système. -->
+                  <td>Sensor failure detected (no signal).</td> <!-- Description de l'événement (défaillance du capteur). -->
                 </tr>
               </tbody>
             </table>
           </div>
         </section>
 
-        <footer class="foot">
-          <span>THALES16 • PHOTO_ATB</span>
-          <span class="muted">Local interface</span>
-        </footer>
-      </main>
-    </div>
-  </div>
+        <footer class="foot"> <!-- Pied de page affichant les informations de l'application. -->
+          <span>THALES16 • PHOTO_ATB</span> <!-- Nom et identifiant de l'application. -->
+          <span class="muted">Local interface</span> <!-- Descriptif du type d'interface. -->
+        </footer> <!-- Fin du pied de page. -->
+      </main> <!-- Fin du contenu principal. -->
+    </div> <!-- Fin du conteneur layout. -->
+  </div> <!-- Fin du conteneur principal de l'application. -->
 
-</body>
-</html>
+</body> <!-- Fin du corps du document. -->
+</html> <!-- Fin du document HTML. -->
+

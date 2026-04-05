@@ -1,203 +1,203 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>THALES16 — Photos</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+<!doctype html> <!-- Déclare que ce document est une page HTML5. -->
+<html lang="en"> <!-- Élément racine contenant toute la page de galerie de photos. L'attribut 'lang="en"' définit la langue principale. -->
+<head> <!-- Section d'en-tête contenant les métadonnées et liens vers les ressources externes. -->
+  <meta charset="utf-8"> <!-- Définit l'encodage des caractères en UTF-8 pour supporter tous les caractères spéciaux et accentués. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Assure que la page s'adapte à la taille de l'écran en mode responsive sur tous les appareils. -->
+  <title>THALES16 — Photos</title> <!-- Titre affiché dans l'onglet du navigateur et utilisé par les moteurs de recherche. -->
+  <link rel="stylesheet" href="https://isis.unice.fr/~bi507141/acces/SAE15/assets/css/style.css"> <!-- Importe la feuille de style CSS externe qui contient tous les styles visuels et la mise en page. -->
+</head> <!-- Fin de la section d'en-tête. -->
+<body> <!-- Début du corps du document HTML qui contient tout le contenu visible de la page. -->
 
-  <div class="app">
-    <!-- Top bar -->
-    <header class="topbar">
-      <div class="brand">
-        <div class="brand-badge">T16</div>
-        <div>
-          <div class="brand-name">THALES16</div>
-          <div class="brand-sub">PHOTO_ATB — Local Web Interface</div>
+  <div class="app"> <!-- Conteneur principal de l'application qui enveloppe toute l'interface utilisateur. -->
+    <!-- Barre supérieure de navigation : affiche la marque et les contrôles utilisateur -->
+    <header class="topbar"> <!-- En-tête fixe en haut de la page contenant la marque et les contrôles principaux. Reste visible lors du défilement. -->
+      <div class="brand"> <!-- Section contenant le logo et le nom de l'application pour identifier la marque. -->
+        <div class="brand-badge">T16</div> <!-- Badge carré contenant l'abréviation de l'application THALES16. -->
+        <div> <!-- Conteneur pour le texte de marque. -->
+          <div class="brand-name">THALES16</div> <!-- Nom complet de l'application affiché en grand. -->
+          <div class="brand-sub">PHOTO_ATB — Local Web Interface</div> <!-- Sous-titre décrivant la fonction (interface web locale) du système. -->
         </div>
       </div>
 
-      <div class="topbar-right">
-        <span class="chip">Role: ADMIN</span>
-        <a class="btn-soft" href="login.html">Logout</a>
+      <div class="topbar-right"> <!-- Section à droite de la barre supérieure contenant les informations et actions utilisateur. -->
+        <span class="chip">Role: ADMIN</span> <!-- Badge affichant le rôle actuel de l'utilisateur connecté (ici ADMIN pour la maquette). -->
+        <a class="btn-soft" href="login.html">Logout</a> <!-- Bouton de déconnexion qui redirige vers la page de connexion. -->
       </div>
-    </header>
+    </header> <!-- Fin de la barre supérieure. -->
 
-    <div class="layout">
-      <!-- Sidebar -->
-      <aside class="sidebar">
-        <a class="side-link" href="dashboard.html">Dashboard</a>
-        <a class="side-link active" href="photos.html">Photos</a>
-        <a class="side-link" href="events.html">Events</a>
-        <a class="side-link" href="take-photo-public.html">Take Photo</a>
+    <div class="layout"> <!-- Conteneur principal qui crée une mise en page en deux colonnes (barre latérale + contenu principal). -->
+      <!-- Barre latérale de navigation : permet de naviguer entre les différentes pages de l'application -->
+      <aside class="sidebar"> <!-- Barre latérale gauche contenant les liens de navigation vers toutes les sections de l'application. -->
+        <a class="side-link" href="dashboard.html">Dashboard</a> <!-- Lien vers le tableau de bord. -->
+        <a class="side-link active" href="photos.html">Photos</a> <!-- Lien vers la galerie de photos (page actuelle). L'attribut 'active' change son style. -->
+        <a class="side-link" href="events.html">Events</a> <!-- Lien vers la page des événements. -->
+        <a class="side-link" href="take-photo-public.html">Take Photo</a> <!-- Lien vers la page de capture de photos. -->
 
-        <div class="side-sep"></div>
+        <div class="side-sep"></div> <!-- Séparateur visuel (ligne horizontale) entre les groupes de navigation. -->
 
-        <a class="side-link" href="users.html">Users</a>
-        <a class="side-link" href="config.html">Configuration</a>
-      </aside>
+        <a class="side-link" href="users.html">Users</a> <!-- Lien vers la page de gestion des utilisateurs. -->
+        <a class="side-link" href="config.html">Configuration</a> <!-- Lien vers la page de configuration du système. -->
+      </aside> <!-- Fin de la barre latérale. -->
 
-      <!-- Main -->
-      <main class="main">
-        <div class="page-head">
-          <div>
-            <h1 class="page-title">Photos</h1>
-            <p class="page-sub">Browse photo history and metadata.</p>
+      <!-- Contenu principal : galerie et historique des photos -->
+      <main class="main"> <!-- Zone principale du contenu contenant tous les éléments de la page de galerie de photos. -->
+        <div class="page-head"> <!-- En-tête de la page contenant le titre et les boutons d'action. -->
+          <div> <!-- Section gauche avec le titre et la description. -->
+            <h1 class="page-title">Photos</h1> <!-- Titre principal de la page affiché en grands caractères. -->
+            <p class="page-sub">Browse photo history and metadata.</p> <!-- Sous-titre décrivant le contenu de la page (historique et métadonnées). -->
           </div>
 
-          <div class="page-actions">
-            <a class="btn-outline" href="take-photo-public.html">Take photo</a>
-            <a class="btn-primary" href="photo-details.html">Open sample details</a>
+          <div class="page-actions"> <!-- Section droite contenant les boutons d'action principaux. -->
+            <a class="btn-outline" href="take-photo-public.html">Take photo</a> <!-- Bouton pour accéder à la page de capture de photos. -->
+            <a class="btn-primary" href="photo-details.html">Open sample details</a> <!-- Bouton pour afficher les détails d'une photo exemple. -->
           </div>
         </div>
 
-        <!-- Filters -->
-        <section class="card panel" style="margin-bottom:12px;">
-          <div class="panel-head">
-            <h2 class="panel-title">Filters</h2>
-            <span class="muted" style="font-size:13px;">Search by date / user / status</span>
+        <!-- Section des filtres : permet de rechercher les photos par date, utilisateur ou statut -->
+        <section class="card panel" style="margin-bottom:12px;"> <!-- Panneau contenant les filtres pour rechercher dans l'historique des photos. -->
+          <div class="panel-head"> <!-- En-tête du panneau. -->
+            <h2 class="panel-title">Filters</h2> <!-- Titre indiquant qu'il s'agit des filtres de recherche. -->
+            <span class="muted" style="font-size:13px;">Search by date / user / status</span> <!-- Sous-titre expliquant les critères de recherche disponibles. -->
           </div>
 
-          <div class="filters">
-            <div>
-              <label class="field-label" for="dateFrom">Date from</label>
-              <input id="dateFrom" type="date">
+          <div class="filters"> <!-- Conteneur pour tous les champs de filtre. -->
+            <div> <!-- Groupe pour le filtre de date début. -->
+              <label class="field-label" for="dateFrom">Date from</label> <!-- Étiquette pour la date de début de la plage. -->
+              <input id="dateFrom" type="date"> <!-- Champ de saisie de la date de début (format date). -->
             </div>
-            <div>
-              <label class="field-label" for="dateTo">Date to</label>
-              <input id="dateTo" type="date">
+            <div> <!-- Groupe pour le filtre de date fin. -->
+              <label class="field-label" for="dateTo">Date to</label> <!-- Étiquette pour la date de fin de la plage. -->
+              <input id="dateTo" type="date"> <!-- Champ de saisie de la date de fin (format date). -->
             </div>
-            <div>
-              <label class="field-label" for="user">User</label>
-              <input id="user" type="text" placeholder="ex: operateur07">
+            <div> <!-- Groupe pour le filtre d'utilisateur. -->
+              <label class="field-label" for="user">User</label> <!-- Étiquette pour filtrer par utilisateur. -->
+              <input id="user" type="text" placeholder="ex: operateur07"> <!-- Champ texte pour saisir le nom d'utilisateur. -->
             </div>
-            <div>
-              <label class="field-label" for="status">Status</label>
-              <select id="status">
-                <option>All</option>
-                <option>OK</option>
-                <option>Error</option>
-                <option>Storage insufficient</option>
+            <div> <!-- Groupe pour le filtre de statut. -->
+              <label class="field-label" for="status">Status</label> <!-- Étiquette pour filtrer par statut de capture. -->
+              <select id="status"> <!-- Liste déroulante pour sélectionner le statut. -->
+                <option>All</option> <!-- Option 1 : afficher tous les statuts. -->
+                <option>OK</option> <!-- Option 2 : afficher les captures réussies. -->
+                <option>Error</option> <!-- Option 3 : afficher les erreurs de capture. -->
+                <option>Storage insufficient</option> <!-- Option 4 : afficher les captures bloquées par manque d'espace. -->
               </select>
             </div>
           </div>
 
-          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
-            <button class="btn-outline" type="button">Apply</button>
-            <button class="btn-outline" type="button">Reset</button>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;"> <!-- Conteneur flexbox pour les boutons d'action des filtres. -->
+            <button class="btn-outline" type="button">Apply</button> <!-- Bouton pour appliquer les filtres sélectionnés. -->
+            <button class="btn-outline" type="button">Reset</button> <!-- Bouton pour réinitialiser tous les filtres. -->
           </div>
         </section>
 
-        <!-- Photos table -->
-        <section class="card panel">
-          <div class="panel-head">
-            <h2 class="panel-title">Photo history</h2>
-            <span class="muted" style="font-size:13px;">Click a row to open details</span>
+        <!-- Section de tableau des photos : affiche l'historique avec miniatures et métadonnées -->
+        <section class="card panel"> <!-- Panneau contenant le tableau de l'historique des photos. -->
+          <div class="panel-head"> <!-- En-tête du panneau. -->
+            <h2 class="panel-title">Photo history</h2> <!-- Titre indiquant qu'il s'agit de l'historique des photos. -->
+            <span class="muted" style="font-size:13px;">Click a row to open details</span> <!-- Sous-titre indiquant que cliquer sur une ligne ouvre les détails. -->
           </div>
 
-          <div style="overflow:auto;">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th style="width:160px;">Preview</th>
-                  <th style="width:180px;">Timestamp</th>
-                  <th style="width:130px;">User</th>
-                  <th style="width:120px;">Luminosity</th>
-                  <th style="width:140px;">Status</th>
-                  <th>Notes</th>
-                  <th style="width:140px;">Actions</th>
+          <div style="overflow:auto;"> <!-- Conteneur avec défilement horizontal pour le tableau sur petits écrans. -->
+            <table class="table"> <!-- Tableau HTML pour afficher l'historique des photos. -->
+              <thead> <!-- En-tête du tableau avec les noms des colonnes. -->
+                <tr> <!-- Ligne du tableau contenant les titres des colonnes. -->
+                  <th style="width:160px;">Preview</th> <!-- Colonne 1 : Miniature/aperçu de la photo - largeur fixe 160px. -->
+                  <th style="width:180px;">Timestamp</th> <!-- Colonne 2 : Date et heure de la capture - largeur fixe 180px. -->
+                  <th style="width:130px;">User</th> <!-- Colonne 3 : Utilisateur qui a capturé la photo - largeur fixe 130px. -->
+                  <th style="width:120px;">Luminosity</th> <!-- Colonne 4 : Niveau de luminosité lors de la capture - largeur fixe 120px. -->
+                  <th style="width:140px;">Status</th> <!-- Colonne 5 : Statut de la capture (OK/WARNING/ERROR) - largeur fixe 140px. -->
+                  <th>Notes</th> <!-- Colonne 6 : Notes additionnelles - largeur flexible. -->
+                  <th style="width:140px;">Actions</th> <!-- Colonne 7 : Boutons d'action (Détails, Supprimer) - largeur fixe 140px. -->
                 </tr>
               </thead>
-              <tbody>
-                <tr class="row-link" onclick="window.location='photo-details.html';">
-                  <td>
-                    <div class="thumb">
-                      <img src="https://www.sbg-systems.com/wp-content/uploads/Satellite-positioning-systems-navigation-1024x768.webp" alt="Photo preview">
+              <tbody> <!-- Corps du tableau contenant les données des photos. -->
+                <tr class="row-link" onclick="window.location='photo-details.html';"> <!-- Ligne 1 : Photo capturée avec succès (cliquable pour afficher les détails). -->
+                  <td> <!-- Cellule 1 : Miniature de la photo. -->
+                    <div class="thumb"> <!-- Conteneur pour la miniature. -->
+                      <img src="https://www.sbg-systems.com/wp-content/uploads/Satellite-positioning-systems-navigation-1024x768.webp" alt="Photo preview"> <!-- Image miniature de la photo. -->
                     </div>
                   </td>
-                  <td>2026-01-09 18:42</td>
-                  <td>admin01</td>
-                  <td>245 lx</td>
-                  <td><span class="badge ok">OK</span></td>
-                  <td>Saved with metadata</td>
-                  <td>
-                    <a class="btn-mini" href="photo-details.html">Details</a>
-                    <a class="btn-mini danger" href="#">Delete</a>
+                  <td>2026-01-09 18:42</td> <!-- Date et heure exacte de la capture. -->
+                  <td>admin01</td> <!-- Utilisateur qui a déclenché la capture (admin01). -->
+                  <td>245 lx</td> <!-- Niveau de luminosité enregistré (245 lux). -->
+                  <td><span class="badge ok">OK</span></td> <!-- Badge vert indiquant une capture réussie. -->
+                  <td>Saved with metadata</td> <!-- Notes : photo sauvegardée avec toutes les métadonnées. -->
+                  <td> <!-- Cellule d'actions pour cette photo. -->
+                    <a class="btn-mini" href="photo-details.html">Details</a> <!-- Bouton pour afficher les détails complets de la photo. -->
+                    <a class="btn-mini danger" href="#">Delete</a> <!-- Bouton pour supprimer la photo. -->
                   </td>
                 </tr>
 
-                <tr class="row-link" onclick="window.location='photo-details.html';">
-                  <td>
-                    <div class="thumb">
-                      <span class="thumb-text">IMG</span>
+                <tr class="row-link" onclick="window.location='photo-details.html';"> <!-- Ligne 2 : Erreur système - défaillance du capteur (cliquable pour afficher les détails). -->
+                  <td> <!-- Cellule 1 : Miniature (absente car erreur système). -->
+                    <div class="thumb"> <!-- Conteneur pour la miniature. -->
+                      <span class="thumb-text">IMG</span> <!-- Texte affiché au lieu d'image car la photo n'a pas pu être capturée. -->
                     </div>
                   </td>
-                  <td>2026-01-09 08:02</td>
-                  <td>system</td>
-                  <td>—</td>
-                  <td><span class="badge alarm">ALARM</span></td>
-                  <td>Sensor failure detected</td>
-                  <td>
-                    <a class="btn-mini" href="photo-details.html">Details</a>
-                    <a class="btn-mini danger" href="#">Delete</a>
+                  <td>2026-01-09 08:02</td> <!-- Date et heure de l'événement d'erreur. -->
+                  <td>system</td> <!-- Événement généré automatiquement par le système. -->
+                  <td>—</td> <!-- Pas de luminosité enregistrée (capture échouée). -->
+                  <td><span class="badge alarm">ALARM</span></td> <!-- Badge rouge indiquant une alarme système grave. -->
+                  <td>Sensor failure detected</td> <!-- Notes : défaillance du capteur détectée. -->
+                  <td> <!-- Cellule d'actions pour cet événement d'erreur. -->
+                    <a class="btn-mini" href="photo-details.html">Details</a> <!-- Bouton pour voir les détails de l'erreur. -->
+                    <a class="btn-mini danger" href="#">Delete</a> <!-- Bouton pour supprimer l'enregistrement d'erreur. -->
                   </td>
                 </tr>
 
-                <tr class="row-link" onclick="window.location='photo-details.html';">
-                  <td>
-                    <div class="thumb">
-                      <img src="https://www.sbg-systems.com/wp-content/uploads/Satellite-positioning-systems-navigation-1024x768.webp" alt="Photo preview">
+                <tr class="row-link" onclick="window.location='photo-details.html';"> <!-- Ligne 3 : Photo capturée avec avertissement luminosité faible (cliquable pour afficher les détails). -->
+                  <td> <!-- Cellule 1 : Miniature de la photo. -->
+                    <div class="thumb"> <!-- Conteneur pour la miniature. -->
+                      <img src="https://www.sbg-systems.com/wp-content/uploads/Satellite-positioning-systems-navigation-1024x768.webp" alt="Photo preview"> <!-- Image miniature de la photo. -->
                     </div>
                   </td>
-                  <td>2026-01-08 21:15</td>
-                  <td>operateur07</td>
-                  <td>92 lx</td>
-                  <td><span class="badge warn">WARNING</span></td>
-                  <td>Luminosity under threshold</td>
-                  <td>
-                    <a class="btn-mini" href="photo-details.html">Details</a>
-                    <a class="btn-mini danger" href="#">Delete</a>
+                  <td>2026-01-08 21:15</td> <!-- Date et heure de la capture (21h15 - conditions de faible luminosité). -->
+                  <td>operateur07</td> <!-- Utilisateur qui a déclenché la capture (operateur07). -->
+                  <td>92 lx</td> <!-- Niveau de luminosité faible (92 lux, sous le seuil configuré). -->
+                  <td><span class="badge warn">WARNING</span></td> <!-- Badge orange indiquant un avertissement de luminosité insuffisante. -->
+                  <td>Luminosity under threshold</td> <!-- Notes : luminosité sous le seuil configuré. -->
+                  <td> <!-- Cellule d'actions pour cette photo. -->
+                    <a class="btn-mini" href="photo-details.html">Details</a> <!-- Bouton pour afficher les détails complets de la photo. -->
+                    <a class="btn-mini danger" href="#">Delete</a> <!-- Bouton pour supprimer la photo. -->
                   </td>
                 </tr>
 
-                <tr class="row-link" onclick="window.location='photo-details.html';">
-                  <td>
-                    <div class="thumb">
-                      <img src="https://www.sbg-systems.com/wp-content/uploads/Satellite-positioning-systems-navigation-1024x768.webp" alt="Photo preview">
+                <tr class="row-link" onclick="window.location='photo-details.html';"> <!-- Ligne 4 : Photo capturée automatiquement selon la règle des 24h (cliquable pour afficher les détails). -->
+                  <td> <!-- Cellule 1 : Miniature de la photo. -->
+                    <div class="thumb"> <!-- Conteneur pour la miniature. -->
+                      <img src="https://www.sbg-systems.com/wp-content/uploads/Satellite-positioning-systems-navigation-1024x768.webp" alt="Photo preview"> <!-- Image miniature de la photo. -->
                     </div>
                   </td>
-                  <td>2026-01-07 14:50</td>
-                  <td>system</td>
-                  <td>310 lx</td>
-                  <td><span class="badge info">INFO</span></td>
-                  <td>Automatic capture (24h rule)</td>
-                  <td>
-                    <a class="btn-mini" href="photo-details.html">Details</a>
-                    <a class="btn-mini danger" href="#">Delete</a>
+                  <td>2026-01-07 14:50</td> <!-- Date et heure de la capture automatique. -->
+                  <td>system</td> <!-- Capture générée automatiquement par le système (règle 24h). -->
+                  <td>310 lx</td> <!-- Niveau de luminosité enregistré (310 lux, conditions bonnes). -->
+                  <td><span class="badge info">INFO</span></td> <!-- Badge bleu indiquant une information de capture automatique. -->
+                  <td>Automatic capture (24h rule)</td> <!-- Notes : capture automatique déclenchée par la règle des 24 heures. -->
+                  <td> <!-- Cellule d'actions pour cette photo. -->
+                    <a class="btn-mini" href="photo-details.html">Details</a> <!-- Bouton pour afficher les détails complets de la photo. -->
+                    <a class="btn-mini danger" href="#">Delete</a> <!-- Bouton pour supprimer la photo. -->
                   </td>
                 </tr>
 
-              </tbody>
-            </table>
-          </div>
+              </tbody> <!-- Fin du corps du tableau. -->
+            </table> <!-- Fin du tableau. -->
+          </div> <!-- Fin du conteneur avec défilement. -->
 
-          <!-- pagination -->
-          <div class="pager">
-            <button class="btn-outline" type="button">← Previous</button>
-            <span class="muted">Page 1 / 5</span>
-            <button class="btn-outline" type="button">Next →</button>
-          </div>
-        </section>
+          <!-- Section de pagination : permet de naviguer entre les pages de résultats -->
+          <div class="pager"> <!-- Conteneur pour les contrôles de pagination. -->
+            <button class="btn-outline" type="button">← Previous</button> <!-- Bouton pour afficher la page précédente. -->
+            <span class="muted">Page 1 / 5</span> <!-- Indicateur montrant la page actuelle et le nombre total de pages. -->
+            <button class="btn-outline" type="button">Next →</button> <!-- Bouton pour afficher la page suivante. -->
+          </div> <!-- Fin de la pagination. -->
+        </section> <!-- Fin du panneau de tableau des photos. -->
 
-        <footer class="foot">
-          <span>THALES16 • PHOTO_ATB</span>
-          <span class="muted">Local interface</span>
-        </footer>
-      </main>
-    </div>
-  </div>
+        <footer class="foot"> <!-- Pied de page affichant les informations de l'application. -->
+          <span>THALES16 • PHOTO_ATB</span> <!-- Nom et identifiant de l'application. -->
+          <span class="muted">Local interface</span> <!-- Descriptif du type d'interface (interface locale). -->
+        </footer> <!-- Fin du pied de page. -->
+      </main> <!-- Fin du contenu principal. -->
+    </div> <!-- Fin du conteneur layout. -->
+  </div> <!-- Fin du conteneur principal de l'application. -->
 
-</body>
-</html>
+</body> <!-- Fin du corps du document. -->
+</html> <!-- Fin du document HTML. -->

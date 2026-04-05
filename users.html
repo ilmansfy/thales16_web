@@ -1,182 +1,183 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>THALES16 — Users</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+<!doctype html> <!-- Déclare que ce document est une page HTML5. -->
+<html lang="en"> <!-- Élément racine contenant toute la page de gestion des utilisateurs. L'attribut 'lang="en"' définit la langue principale. -->
+<head> <!-- Section d'en-tête contenant les métadonnées et liens vers les ressources externes. -->
+  <meta charset="utf-8"> <!-- Définit l'encodage des caractères en UTF-8 pour supporter tous les caractères spéciaux et accentués. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Assure que la page s'adapte à la taille de l'écran en mode responsive sur tous les appareils. -->
+  <title>THALES16 — Users</title> <!-- Titre affiché dans l'onglet du navigateur et utilisé par les moteurs de recherche. -->
+  <link rel="stylesheet" href="https://isis.unice.fr/~bi507141/acces/SAE15/assets/css/style.css"> <!-- Importe la feuille de style CSS externe qui contient tous les styles visuels et la mise en page. -->
+</head> <!-- Fin de la section d'en-tête. -->
+<body> <!-- Début du corps du document HTML qui contient tout le contenu visible de la page. -->
 
-  <div class="app">
-    <!-- Top bar -->
-    <header class="topbar">
-      <div class="brand">
-        <div class="brand-badge">T16</div>
-        <div>
-          <div class="brand-name">THALES16</div>
-          <div class="brand-sub">PHOTO_ATB — Local Web Interface</div>
+  <div class="app"> <!-- Conteneur principal de l'application qui enveloppe toute l'interface utilisateur. -->
+    <!-- Barre supérieure de navigation : affiche la marque et les contrôles utilisateur -->
+    <header class="topbar"> <!-- En-tête fixe en haut de la page contenant la marque et les contrôles principaux. Reste visible lors du défilement. -->
+      <div class="brand"> <!-- Section contenant le logo et le nom de l'application pour identifier la marque. -->
+        <div class="brand-badge">T16</div> <!-- Badge carré contenant l'abréviation de l'application THALES16. -->
+        <div> <!-- Conteneur pour le texte de marque. -->
+          <div class="brand-name">THALES16</div> <!-- Nom complet de l'application affiché en grand. -->
+          <div class="brand-sub">PHOTO_ATB — Local Web Interface</div> <!-- Sous-titre décrivant la fonction (interface web locale) du système. -->
         </div>
       </div>
 
-      <div class="topbar-right">
-        <span class="chip">Role: ADMIN</span>
-        <a class="btn-soft" href="login.html">Logout</a>
+      <div class="topbar-right"> <!-- Section à droite de la barre supérieure contenant les informations et actions utilisateur. -->
+        <span class="chip">Role: ADMIN</span> <!-- Badge affichant le rôle actuel de l'utilisateur connecté (ici ADMIN pour la maquette). -->
+        <a class="btn-soft" href="login.html">Logout</a> <!-- Bouton de déconnexion qui redirige vers la page de connexion. -->
       </div>
-    </header>
+    </header> <!-- Fin de la barre supérieure. -->
 
-    <div class="layout">
-      <!-- Sidebar -->
-      <aside class="sidebar">
-        <a class="side-link" href="dashboard.html">Dashboard</a>
-        <a class="side-link" href="photos.html">Photos</a>
-        <a class="side-link" href="events.html">Events</a>
-        <a class="side-link" href="take-photo-public.html">Take Photo</a>
+    <div class="layout"> <!-- Conteneur principal qui crée une mise en page en deux colonnes (barre latérale + contenu principal). -->
+      <!-- Barre latérale de navigation : permet de naviguer entre les différentes pages de l'application -->
+      <aside class="sidebar"> <!-- Barre latérale gauche contenant les liens de navigation vers toutes les sections de l'application. -->
+        <a class="side-link" href="dashboard.html">Dashboard</a> <!-- Lien vers le tableau de bord. -->
+        <a class="side-link" href="photos.html">Photos</a> <!-- Lien vers la galerie de photos. -->
+        <a class="side-link" href="events.html">Events</a> <!-- Lien vers la page des événements. -->
+        <a class="side-link" href="take-photo-public.html">Take Photo</a> <!-- Lien vers la page de capture de photos. -->
 
-        <div class="side-sep"></div>
+        <div class="side-sep"></div> <!-- Séparateur visuel (ligne horizontale) entre les groupes de navigation. -->
 
-        <a class="side-link active" href="users.html">Users</a>
-        <a class="side-link" href="config.html">Configuration</a>
-      </aside>
+        <a class="side-link active" href="users.html">Users</a> <!-- Lien vers la page de gestion des utilisateurs (page actuelle). L'attribut 'active' change son style. -->
+        <a class="side-link" href="config.html">Configuration</a> <!-- Lien vers la page de configuration du système. -->
+      </aside> <!-- Fin de la barre latérale. -->
 
-      <!-- Main -->
-      <main class="main">
-        <div class="page-head">
-          <div>
-            <h1 class="page-title">Users</h1>
-            <p class="page-sub">Create, delete, unlock accounts and reset passwords.</p>
+      <!-- Contenu principal : gestion des utilisateurs et contrôle d'accès -->
+      <main class="main"> <!-- Zone principale du contenu contenant tous les éléments de la page de gestion des utilisateurs. -->
+        <div class="page-head"> <!-- En-tête de la page contenant le titre et les boutons d'action. -->
+          <div> <!-- Section gauche avec le titre et la description. -->
+            <h1 class="page-title">Users</h1> <!-- Titre principal de la page affiché en grands caractères. -->
+            <p class="page-sub">Create, delete, unlock accounts and reset passwords.</p> <!-- Sous-titre décrivant les actions possibles sur les utilisateurs. -->
           </div>
 
-          <div class="page-actions">
-            <a class="btn-outline" href="events.html">Open events</a>
-            <a class="btn-primary" href="dashboard.html">Back to dashboard</a>
+          <div class="page-actions"> <!-- Section droite contenant les boutons d'action principaux. -->
+            <a class="btn-outline" href="events.html">Open events</a> <!-- Bouton pour accéder à la page des événements. -->
+            <a class="btn-primary" href="dashboard.html">Back to dashboard</a> <!-- Bouton pour retourner au tableau de bord. -->
           </div>
         </div>
 
-        <!-- Add user -->
-        <section class="card panel" style="margin-bottom:12px;">
-          <div class="panel-head">
-            <h2 class="panel-title">Add user</h2>
-            <span class="muted" style="font-size:13px;">Administrator can create OPERATOR or ADMIN</span>
+        <!-- Formulaire d'ajout d'utilisateur -->
+        <section class="card panel" style="margin-bottom:12px;"> <!-- Panneau contenant le formulaire de création de nouvel utilisateur. -->
+          <div class="panel-head"> <!-- En-tête du panneau. -->
+            <h2 class="panel-title">Add user</h2> <!-- Titre indiquant qu'il s'agit d'ajouter un utilisateur. -->
+            <span class="muted" style="font-size:13px;">Administrator can create OPERATOR or ADMIN</span> <!-- Sous-titre expliquant les rôles créables (OPERATEUR ou ADMIN). -->
           </div>
 
-          <div class="user-form">
-            <div>
-              <label class="field-label" for="uname">Username</label>
-              <input id="uname" type="text" placeholder="ex: operateur12">
+          <div class="user-form"> <!-- Conteneur pour les champs du formulaire. -->
+            <div> <!-- Groupe pour le champ "Username". -->
+              <label class="field-label" for="uname">Username</label> <!-- Étiquette du champ nom d'utilisateur. -->
+              <input id="uname" type="text" placeholder="ex: operateur12"> <!-- Champ texte pour saisir le nom d'utilisateur. -->
             </div>
 
-            <div>
-              <label class="field-label" for="role">Role</label>
-              <select id="role">
-                <option>OPERATEUR</option>
-                <option>ADMIN</option>
+            <div> <!-- Groupe pour le champ "Role". -->
+              <label class="field-label" for="role">Role</label> <!-- Étiquette du champ rôle. -->
+              <select id="role"> <!-- Liste déroulante pour sélectionner le rôle. -->
+                <option>OPERATEUR</option> <!-- Option 1 : rôle OPERATEUR. -->
+                <option>ADMIN</option> <!-- Option 2 : rôle ADMIN. -->
               </select>
             </div>
 
-            <div>
-              <label class="field-label" for="pwd">Initial password</label>
-              <input id="pwd" type="password" placeholder="Set an initial password">
+            <div> <!-- Groupe pour le champ "Initial password". -->
+              <label class="field-label" for="pwd">Initial password</label> <!-- Étiquette du champ mot de passe initial. -->
+              <input id="pwd" type="password" placeholder="Set an initial password"> <!-- Champ mot de passe pour définir le mot de passe initial. -->
             </div>
 
-            <div class="full">
-              <label class="field-label" for="note">Notes</label>
-              <input id="note" type="text" placeholder="Optional note (ex: team, location...)">
+            <div class="full"> <!-- Groupe pour le champ "Notes" (largeur pleine). -->
+              <label class="field-label" for="note">Notes</label> <!-- Étiquette du champ notes optionnelles. -->
+              <input id="note" type="text" placeholder="Optional note (ex: team, location...)"> <!-- Champ texte pour ajouter des notes optionnelles sur l'utilisateur. -->
             </div>
           </div>
 
-          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
-            <button class="btn-primary" type="button">Create user</button>
-            <button class="btn-outline" type="button">Clear</button>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;"> <!-- Conteneur flexbox pour les boutons d'action du formulaire. -->
+            <button class="btn-primary" type="button">Create user</button> <!-- Bouton principal pour créer l'utilisateur avec les données saisies. -->
+            <button class="btn-outline" type="button">Clear</button> <!-- Bouton pour réinitialiser les champs du formulaire. -->
           </div>
         </section>
 
-        <!-- Users table -->
-        <section class="card panel">
-          <div class="panel-head">
-            <h2 class="panel-title">User list</h2>
-            <span class="muted" style="font-size:13px;">Locked accounts can be unlocked</span>
+        <!-- Tableau des utilisateurs -->
+        <section class="card panel"> <!-- Panneau contenant le tableau de tous les utilisateurs du système. -->
+          <div class="panel-head"> <!-- En-tête du panneau. -->
+            <h2 class="panel-title">User list</h2> <!-- Titre indiquant qu'il s'agit de la liste des utilisateurs. -->
+            <span class="muted" style="font-size:13px;">Locked accounts can be unlocked</span> <!-- Sous-titre expliquant que les comptes verrouillés peuvent être déverrouillés. -->
           </div>
 
-          <div style="overflow:auto;">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th style="width:160px;">Username</th>
-                  <th style="width:140px;">Role</th>
-                  <th style="width:120px;">Status</th>
-                  <th style="width:160px;">Last activity</th>
-                  <th>Notes</th>
-                  <th style="width:240px;">Actions</th>
+          <div style="overflow:auto;"> <!-- Conteneur avec défilement horizontal pour le tableau sur petits écrans. -->
+            <table class="table"> <!-- Tableau HTML pour afficher la liste des utilisateurs. -->
+              <thead> <!-- En-tête du tableau avec les noms des colonnes. -->
+                <tr> <!-- Ligne du tableau contenant les titres des colonnes. -->
+                  <th style="width:160px;">Username</th> <!-- Colonne 1 : Nom d'utilisateur (largeur fixe 160px). -->
+                  <th style="width:140px;">Role</th> <!-- Colonne 2 : Rôle de l'utilisateur (largeur fixe 140px). -->
+                  <th style="width:120px;">Status</th> <!-- Colonne 3 : État du compte (ACTIVE ou LOCKED) - largeur fixe 120px. -->
+                  <th style="width:160px;">Last activity</th> <!-- Colonne 4 : Dernière activité de l'utilisateur (largeur fixe 160px). -->
+                  <th>Notes</th> <!-- Colonne 5 : Notes associées au compte - largeur flexible. -->
+                  <th style="width:240px;">Actions</th> <!-- Colonne 6 : Boutons d'action (Unlock, Reset password, Delete) - largeur fixe 240px. -->
                 </tr>
               </thead>
 
-              <tbody>
-                <tr>
-                  <td>superadmin</td>
-                  <td><span class="badge info">SUPERADMIN</span></td>
-                  <td><span class="badge ok">ACTIVE</span></td>
-                  <td>2026-01-09 19:02</td>
-                  <td>Single system owner</td>
-                  <td>
-                    <span class="muted" style="font-size:13px;">No lock / no delete</span>
+              <tbody> <!-- Corps du tableau contenant les données des utilisateurs. -->
+                <tr> <!-- Ligne 1 : Utilisateur SUPERADMIN. -->
+                  <td>superadmin</td> <!-- Nom d'utilisateur : superadmin. -->
+                  <td><span class="badge info">SUPERADMIN</span></td> <!-- Rôle : SUPERADMIN (badge bleu). -->
+                  <td><span class="badge ok">ACTIVE</span></td> <!-- État : ACTIVE (badge vert). -->
+                  <td>2026-01-09 19:02</td> <!-- Dernière activité : 09/01/2026 à 19:02. -->
+                  <td>Single system owner</td> <!-- Notes : propriétaire unique du système. -->
+                  <td> <!-- Actions disponibles. -->
+                    <span class="muted" style="font-size:13px;">No lock / no delete</span> <!-- Message indiquant que ce compte ne peut pas être verrouillé ou supprimé. -->
                   </td>
                 </tr>
 
-                <tr>
-                  <td>admin01</td>
-                  <td><span class="badge info">ADMIN</span></td>
-                  <td><span class="badge ok">ACTIVE</span></td>
-                  <td>2026-01-09 18:42</td>
-                  <td>Main admin</td>
-                  <td>
-                    <a class="btn-mini" href="#">Reset password</a>
-                    <a class="btn-mini danger" href="#">Delete</a>
+                <tr> <!-- Ligne 2 : Utilisateur ADMIN. -->
+                  <td>admin01</td> <!-- Nom d'utilisateur : admin01. -->
+                  <td><span class="badge info">ADMIN</span></td> <!-- Rôle : ADMIN (badge bleu). -->
+                  <td><span class="badge ok">ACTIVE</span></td> <!-- État : ACTIVE (badge vert). -->
+                  <td>2026-01-09 18:42</td> <!-- Dernière activité : 09/01/2026 à 18:42. -->
+                  <td>Main admin</td> <!-- Notes : administrateur principal. -->
+                  <td> <!-- Actions disponibles. -->
+                    <a class="btn-mini" href="#">Reset password</a> <!-- Bouton pour réinitialiser le mot de passe. -->
+                    <a class="btn-mini danger" href="#">Delete</a> <!-- Bouton pour supprimer le compte (styled en rouge). -->
                   </td>
                 </tr>
 
-                <tr>
-                  <td>operateur07</td>
-                  <td><span class="badge warn">OPERATEUR</span></td>
-                  <td><span class="badge warn">LOCKED</span></td>
-                  <td>2026-01-09 10:10</td>
-                  <td>Locked after failed attempts</td>
-                  <td>
-                    <a class="btn-mini" href="#">Unlock</a>
-                    <a class="btn-mini" href="#">Reset password</a>
-                    <a class="btn-mini danger" href="#">Delete</a>
+                <tr> <!-- Ligne 3 : Utilisateur OPERATEUR verrouillé. -->
+                  <td>operateur07</td> <!-- Nom d'utilisateur : operateur07. -->
+                  <td><span class="badge warn">OPERATEUR</span></td> <!-- Rôle : OPERATEUR (badge orange). -->
+                  <td><span class="badge warn">LOCKED</span></td> <!-- État : LOCKED (badge orange indiquant un compte verrouillé). -->
+                  <td>2026-01-09 10:10</td> <!-- Dernière activité : 09/01/2026 à 10:10. -->
+                  <td>Locked after failed attempts</td> <!-- Notes : verrouillé après plusieurs tentatives échouées. -->
+                  <td> <!-- Actions disponibles. -->
+                    <a class="btn-mini" href="#">Unlock</a> <!-- Bouton pour déverrouiller le compte. -->
+                    <a class="btn-mini" href="#">Reset password</a> <!-- Bouton pour réinitialiser le mot de passe. -->
+                    <a class="btn-mini danger" href="#">Delete</a> <!-- Bouton pour supprimer le compte (styled en rouge). -->
                   </td>
                 </tr>
 
-                <tr>
-                  <td>operateur12</td>
-                  <td><span class="badge warn">OPERATEUR</span></td>
-                  <td><span class="badge ok">ACTIVE</span></td>
-                  <td>2026-01-08 21:15</td>
-                  <td>Night shift</td>
-                  <td>
-                    <a class="btn-mini" href="#">Reset password</a>
-                    <a class="btn-mini danger" href="#">Delete</a>
+                <tr> <!-- Ligne 4 : Utilisateur OPERATEUR actif. -->
+                  <td>operateur12</td> <!-- Nom d'utilisateur : operateur12. -->
+                  <td><span class="badge warn">OPERATEUR</span></td> <!-- Rôle : OPERATEUR (badge orange). -->
+                  <td><span class="badge ok">ACTIVE</span></td> <!-- État : ACTIVE (badge vert). -->
+                  <td>2026-01-08 21:15</td> <!-- Dernière activité : 08/01/2026 à 21:15 (équipe de nuit). -->
+                  <td>Night shift</td> <!-- Notes : équipe de nuit. -->
+                  <td> <!-- Actions disponibles. -->
+                    <a class="btn-mini" href="#">Reset password</a> <!-- Bouton pour réinitialiser le mot de passe. -->
+                    <a class="btn-mini danger" href="#">Delete</a> <!-- Bouton pour supprimer le compte (styled en rouge). -->
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <div class="pager">
-            <button class="btn-outline" type="button">← Previous</button>
-            <span class="muted">Page 1 / 3</span>
-            <button class="btn-outline" type="button">Next →</button>
+          <div class="pager"> <!-- Conteneur pour les contrôles de pagination. -->
+            <button class="btn-outline" type="button">← Previous</button> <!-- Bouton pour aller à la page précédente. -->
+            <span class="muted">Page 1 / 3</span> <!-- Indicateur de la page actuelle (page 1 sur 3). -->
+            <button class="btn-outline" type="button">Next →</button> <!-- Bouton pour aller à la page suivante. -->
           </div>
         </section>
 
-        <footer class="foot">
-          <span>THALES16 • PHOTO_ATB</span>
-          <span class="muted">Local interface</span>
-        </footer>
-      </main>
-    </div>
-  </div>
+        <footer class="foot"> <!-- Pied de page affichant les informations de l'application. -->
+          <span>THALES16 • PHOTO_ATB</span> <!-- Nom et identifiant de l'application. -->
+          <span class="muted">Local interface</span> <!-- Descriptif du type d'interface (interface locale). -->
+        </footer> <!-- Fin du pied de page. -->
+      </main> <!-- Fin du contenu principal. -->
+    </div> <!-- Fin du conteneur layout. -->
+  </div> <!-- Fin du conteneur principal de l'application. -->
 
 </body>
 </html>
+

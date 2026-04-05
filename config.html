@@ -1,221 +1,224 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>THALES16 — Configuration</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+<!doctype html> <!-- Déclare que ce document est une page HTML5. -->
+<html lang="en"> <!-- Élément racine qui contient toute la page de configuration de l'application THALES16 PHOTO_ATB. L'attribut 'lang="en"' définit la langue principale. -->
+<head> <!-- Section d'en-tête contenant les métadonnées et liens vers les ressources externes. -->
+  <meta charset="utf-8"><!-- Définit l'encodage des caractères en UTF-8 pour supporter tous les caractères spéciaux et accentués. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Assure que la page s'adapte à la taille de l'écran en mode responsive sur tous les appareils (mobile, tablette, ordinateur). -->
+  <title>THALES16 — Configuration</title> <!-- Titre affiché dans l'onglet du navigateur et utilisé par les moteurs de recherche. -->
+  <link rel="stylesheet" href="https://isis.unice.fr/~bi507141/acces/SAE15/assets/css/style.css"> <!-- Importe la feuille de style CSS externe qui contient tous les styles visuels et la mise en page de la page. -->
+</head> <!-- Fin de la section d'en-tête. -->
+<body> <!-- Début du corps du document HTML qui contient tout le contenu visible de la page. -->
 
-  <div class="app">
-    <!-- Top bar -->
-    <header class="topbar">
-      <div class="brand">
-        <div class="brand-badge">T16</div>
-        <div>
-          <div class="brand-name">THALES16</div>
-          <div class="brand-sub">PHOTO_ATB — Local Web Interface</div>
+  <div class="app"> <!-- Conteneur principal de l'application qui enveloppe toute l'interface utilisateur. -->
+    <!-- Barre supérieure de navigation : affiche la marque et les contrôles utilisateur -->
+    <header class="topbar"> <!-- En-tête fixe en haut de la page contenant la marque et les contrôles principaux. Reste visible lors du défilement. -->
+      <div class="brand"> <!-- Section contenant le logo et le nom de l'application pour identifier la marque. -->
+        <div class="brand-badge">T16</div> <!-- Badge carré contenant l'abréviation de l'application THALES16. -->
+
+        <div> <!-- Conteneur pour le texte de marque. -->
+          <div class="brand-name">THALES16</div> <!-- Nom complet de l'application affiché en grand. -->
+          <div class="brand-sub">PHOTO_ATB — Local Web Interface</div> <!-- Sous-titre décrivant la fonction (interface web locale) du système. -->
         </div>
       </div>
 
-      <div class="topbar-right">
-        <span class="chip">Role: ADMIN</span>
-        <a class="btn-soft" href="login.html">Logout</a>
+      <div class="topbar-right"> <!-- Section à droite de la barre supérieure contenant les informations et actions utilisateur. -->
+        <span class="chip">Role: ADMIN</span> <!-- Badge affichant le rôle actuel de l'utilisateur connecté (ici ADMIN pour la maquette). -->
+        <a class="btn-soft" href="login.html">Logout</a> <!-- Bouton de déconnexion qui redirige vers la page de connexion. -->
       </div>
-    </header>
+    </header> <!-- Fin de la barre supérieure. -->
 
-    <div class="layout">
-      <!-- Sidebar -->
-      <aside class="sidebar">
-        <a class="side-link" href="dashboard.html">Dashboard</a>
-        <a class="side-link" href="photos.html">Photos</a>
-        <a class="side-link" href="events.html">Events</a>
-        <a class="side-link" href="take-photo-public.html">Take Photo</a>
+    <div class="layout"> <!-- Conteneur principal qui crée une mise en page en deux colonnes (barre latérale + contenu principal). -->
+      <!-- Barre latérale de navigation : permet de naviguer entre les différentes pages de l'application -->
+      <aside class="sidebar"> <!-- Barre latérale gauche contenant les liens de navigation vers toutes les sections de l'application. -->
 
-        <div class="side-sep"></div>
+        <!-- Liens de navigation vers différentes sections de l'interface web -->
+        <a class="side-link" href="dashboard.html">Dashboard</a> <!-- Lien vers le tableau de bord principal. -->
+        <a class="side-link" href="photos.html">Photos</a> <!-- Lien vers la galerie de photos. -->
+        <a class="side-link" href="events.html">Events</a> <!-- Lien vers la page des événements. -->
+        <a class="side-link" href="take-photo-public.html">Take Photo</a> <!-- Lien vers la page de capture de photos. -->
 
-        <a class="side-link" href="users.html">Users</a>
-        <a class="side-link active" href="config.html">Configuration</a>
-      </aside>
+        <div class="side-sep"></div> <!-- Séparateur visuel (ligne horizontale) entre les groupes de navigation. -->
 
-      <!-- Main -->
-      <main class="main">
-        <div class="page-head">
-          <div>
-            <h1 class="page-title">Configuration</h1>
-            <p class="page-sub">Manage application parameters and security policy.</p>
+        <a class="side-link" href="users.html">Users</a> <!-- Lien vers la page de gestion des utilisateurs. -->
+        <a class="side-link active" href="config.html">Configuration</a> <!-- Lien vers la page actuelle (configuration). L'attribut 'active' change son style pour indiquer que c'est la page courante. -->
+      </aside> <!-- Fin de la barre latérale. -->
+
+      <!-- Contenu principal de la page : affiche les paramètres de configuration -->
+      <main class="main"> <!-- Zone principale du contenu contenant tous les formulaires de configuration. -->
+        <div class="page-head"> <!-- En-tête de la page contenant le titre et les boutons d'action. -->
+          <div> <!-- Section gauche avec le titre et la description. -->
+            <h1 class="page-title">Configuration</h1> <!-- Titre principal de la page affiché en grands caractères. -->
+            <p class="page-sub">Manage application parameters and security policy.</p> <!-- Sous-titre décrivant le but de la page. -->
           </div>
 
-          <div class="page-actions">
-            <button class="btn-outline" type="button">Reset to defaults</button>
-            <button class="btn-primary" type="button">Save changes</button>
+          <div class="page-actions"> <!-- Section droite contenant les boutons d'action pour gérer les configurations. -->
+            <button class="btn-outline" type="button">Reset to defaults</button> <!-- Bouton pour réinitialiser tous les paramètres à leurs valeurs par défaut. -->
+            <button class="btn-primary" type="button">Save changes</button> <!-- Bouton principal pour sauvegarder tous les changements effectués. -->
           </div>
         </div>
 
-        <!-- Password policy -->
-        <section class="card panel" style="margin-bottom:12px;">
-          <div class="panel-head">
-            <h2 class="panel-title">Password policy</h2>
-            <span class="muted" style="font-size:13px;">Editable by ADMIN / SUPERADMIN</span>
+        <!-- Section 1 : Politique de mot de passe - configure les règles de sécurité des mots de passe -->
+        <section class="card panel" style="margin-bottom:12px;"> <!-- Conteneur pour la section de politique de mot de passe avec style en carte. -->
+          <div class="panel-head"> <!-- En-tête de la section. -->
+            <h2 class="panel-title">Password policy</h2> <!-- Titre de la section indiquant le sujet. -->
+            <span class="muted" style="font-size:13px;">Editable by ADMIN / SUPERADMIN</span> <!-- Sous-titre grisé indiquant que seuls les rôles ADMIN et SUPERADMIN peuvent modifier ces paramètres. -->
           </div>
 
-          <div class="config-grid">
-            <div>
-              <label class="field-label" for="minLen">Minimum length</label>
-              <input id="minLen" type="number" value="8" min="6" max="64">
+          <div class="config-grid"> <!-- Grille de configuration contenant les champs pour les différents paramètres. -->
+            <div> <!-- Groupe pour la longueur minimale du mot de passe. -->
+              <label class="field-label" for="minLen">Minimum length</label> <!-- Étiquette décrivant le paramètre. -->
+              <input id="minLen" type="number" value="8" min="6" max="64"> <!-- Champ numérique pour entrer la longueur minimale (par défaut 8, min 6, max 64). -->
             </div>
 
-            <div>
-              <label class="field-label" for="nDigit">Minimum digits (n)</label>
-              <input id="nDigit" type="number" value="1" min="0" max="10">
+            <div> <!-- Groupe pour le nombre minimum de chiffres. -->
+              <label class="field-label" for="nDigit">Minimum digits (n)</label> <!-- Étiquette décrivant le nombre minimum de chiffres requis. -->
+              <input id="nDigit" type="number" value="1" min="0" max="10"> <!-- Champ numérique (par défaut 1 chiffre minimum). -->
             </div>
 
-            <div>
-              <label class="field-label" for="pLower">Minimum lowercase (p)</label>
-              <input id="pLower" type="number" value="1" min="0" max="10">
+            <div> <!-- Groupe pour le nombre minimum de minuscules. -->
+              <label class="field-label" for="pLower">Minimum lowercase (p)</label> <!-- Étiquette pour les lettres minuscules. -->
+              <input id="pLower" type="number" value="1" min="0" max="10"> <!-- Champ numérique pour les minuscules (par défaut 1). -->
             </div>
 
-            <div>
-              <label class="field-label" for="qUpper">Minimum uppercase (q)</label>
-              <input id="qUpper" type="number" value="1" min="0" max="10">
+            <div> <!-- Groupe pour le nombre minimum de majuscules. -->
+              <label class="field-label" for="qUpper">Minimum uppercase (q)</label> <!-- Étiquette pour les lettres majuscules. -->
+              <input id="qUpper" type="number" value="1" min="0" max="10"> <!-- Champ numérique pour les majuscules (par défaut 1). -->
             </div>
 
-            <div>
-              <label class="field-label" for="rSpec">Minimum special (r)</label>
-              <input id="rSpec" type="number" value="1" min="0" max="10">
+            <div> <!-- Groupe pour le nombre minimum de caractères spéciaux. -->
+              <label class="field-label" for="rSpec">Minimum special (r)</label> <!-- Étiquette pour les caractères spéciaux. -->
+              <input id="rSpec" type="number" value="1" min="0" max="10"> <!-- Champ numérique pour les caractères spéciaux (par défaut 1). -->
             </div>
 
-            <div>
-              <label class="field-label" for="lockTries">Lock after attempts</label>
-              <input id="lockTries" type="number" value="3" min="1" max="10">
+            <div> <!-- Groupe pour le nombre de tentatives avant verrouillage. -->
+              <label class="field-label" for="lockTries">Lock after attempts</label> <!-- Étiquette décrivant le verrouillage après échecs. -->
+              <input id="lockTries" type="number" value="3" min="1" max="10"> <!-- Champ numérique (par défaut 3 tentatives avant verrouillage). -->
             </div>
 
-            <div class="wide">
-              <div class="policy-flags">
-                <label class="flag">
-                  <input type="checkbox" checked>
-                  <span>No accents allowed</span>
+            <div class="wide"> <!-- Conteneur pleine largeur pour les cases à cocher. -->
+              <div class="policy-flags"> <!-- Groupe de cases à cocher pour les options de politique. -->
+                <label class="flag"> <!-- Option 1 : Interdire les accents. -->
+                  <input type="checkbox" checked> <!-- Case à cocher cochée par défaut. -->
+                  <span>No accents allowed</span> <!-- Texte décrivant l'option. -->
                 </label>
 
-                <label class="flag">
-                  <input type="checkbox" checked>
-                  <span>Password must not contain username</span>
+                <label class="flag"> <!-- Option 2 : Le mot de passe ne doit pas contenir le nom d'utilisateur. -->
+                  <input type="checkbox" checked> <!-- Case à cocher cochée par défaut. -->
+                  <span>Password must not contain username</span> <!-- Texte décrivant l'option. -->
                 </label>
 
-                <label class="flag">
-                  <input type="checkbox" checked>
-                  <span>Force password change at first login</span>
+                <label class="flag"> <!-- Option 3 : Forcer le changement de mot de passe à la première connexion. -->
+                  <input type="checkbox" checked> <!-- Case à cocher cochée par défaut. -->
+                  <span>Force password change at first login</span> <!-- Texte décrivant l'option. -->
                 </label>
 
-                <label class="flag">
-                  <input type="checkbox" checked>
-                  <span>SuperAdmin account never locked</span>
+                <label class="flag"> <!-- Option 4 : Le compte SuperAdmin ne peut jamais être verrouillé. -->
+                  <input type="checkbox" checked> <!-- Case à cocher cochée par défaut. -->
+                  <span>SuperAdmin account never locked</span> <!-- Texte décrivant l'option. -->
                 </label>
               </div>
             </div>
           </div>
 
-          <div class="hint">
-            Allowed special characters: <b>[!"#$%&'()*+,-./:;&lt;=&gt;?@\^_`|}~]</b>
+          <div class="hint"> <!-- Zone d'information affichant les caractères autorisés. -->
+            Allowed special characters: <b>[!"#$%&'()*+,-./:;&lt;=&gt;?@\^_`|}~]</b> <!-- Liste des caractères spéciaux autorisés dans les mots de passe. -->
           </div>
-        </section>
+        </section> <!-- Fin de la section politique de mot de passe. -->
 
-        <!-- Logs retention -->
-        <section class="card panel" style="margin-bottom:12px;">
-          <div class="panel-head">
-            <h2 class="panel-title">Logs</h2>
-            <span class="muted" style="font-size:13px;">Retention and export</span>
+        <!-- Section 2 : Conservation des logs - configure la rétention et l'export des journaux d'événements -->
+        <section class="card panel" style="margin-bottom:12px;"> <!-- Conteneur pour la section des logs. -->
+          <div class="panel-head"> <!-- En-tête de la section. -->
+            <h2 class="panel-title">Logs</h2> <!-- Titre de la section. -->
+            <span class="muted" style="font-size:13px;">Retention and export</span> <!-- Sous-titre grisé expliquant le sujet. -->
           </div>
 
-          <div class="config-grid">
-            <div>
-              <label class="field-label" for="retention">Retention (days)</label>
-              <input id="retention" type="number" value="30" min="1" max="365">
+          <div class="config-grid"> <!-- Grille contenant les paramètres des logs. -->
+            <div> <!-- Groupe pour la durée de rétention. -->
+              <label class="field-label" for="retention">Retention (days)</label> <!-- Étiquette décrivant la période de conservation. -->
+              <input id="retention" type="number" value="30" min="1" max="365"> <!-- Champ numérique pour la rétention en jours (par défaut 30 jours, max 1 an). -->
             </div>
 
-            <div>
-              <label class="field-label" for="levels">Stored levels</label>
-              <select id="levels">
-                <option selected>INFO + WARNING + ALARM</option>
-                <option>WARNING + ALARM</option>
-                <option>ALARM only</option>
+            <div> <!-- Groupe pour le niveau des logs à conserver. -->
+              <label class="field-label" for="levels">Stored levels</label> <!-- Étiquette pour le niveau de logs. -->
+              <select id="levels"> <!-- Liste déroulante pour choisir les niveaux de logs. -->
+                <option selected>INFO + WARNING + ALARM</option> <!-- Option 1 : tous les niveaux (par défaut). -->
+                <option>WARNING + ALARM</option> <!-- Option 2 : avertissements et alarmes. -->
+                <option>ALARM only</option> <!-- Option 3 : alarmes seulement. -->
               </select>
             </div>
 
-            <div class="wide">
-              <div style="display:flex; gap:10px; flex-wrap:wrap;">
-                <button class="btn-outline" type="button">Export CSV</button>
-                <button class="btn-outline" type="button">Purge old logs</button>
+            <div class="wide"> <!-- Conteneur pleine largeur pour les boutons. -->
+              <div style="display:flex; gap:10px; flex-wrap:wrap;"> <!-- Conteneur flexbox pour aligner les boutons horizontalement. -->
+                <button class="btn-outline" type="button">Export CSV</button> <!-- Bouton pour exporter les logs en format CSV.(Maquette)-->
+                <button class="btn-outline" type="button">Purge old logs</button> <!-- Bouton pour supprimer les anciens logs. (maquette)-->
               </div>
             </div>
           </div>
-        </section>
+        </section> <!-- Fin de la section logs. -->
 
-        <!-- Sensor / luminosity -->
-        <section class="card panel">
-          <div class="panel-head">
-            <h2 class="panel-title">Sensor & capture rules</h2>
-            <span class="muted" style="font-size:13px;">Luminosity threshold and automation</span>
+        <!-- Section 3 : Capteur et luminosité - configure les règles de captage et les seuils d'éclairage (Maquette)-->
+        <section class="card panel"> <!-- Conteneur pour la section du capteur. -->
+          <div class="panel-head"> <!-- En-tête de la section. -->
+            <h2 class="panel-title">Sensor & capture rules</h2> <!-- Titre de la section. -->
+            <span class="muted" style="font-size:13px;">Luminosity threshold and automation</span> <!-- Sous-titre expliquant qu'il s'agit des seuils d'éclairage et d'automatisation. -->
           </div>
 
-          <div class="config-grid">
-            <div>
-              <label class="field-label" for="luxThreshold">Luminosity threshold (lx)</label>
-              <input id="luxThreshold" type="number" value="150" min="0" max="5000">
+          <div class="config-grid"> <!-- Grille contenant les paramètres du capteur. -->
+            <div> <!-- Groupe pour le seuil de luminosité. -->
+              <label class="field-label" for="luxThreshold">Luminosity threshold (lx)</label> <!-- Étiquette pour le seuil de luminosité en lux. -->
+              <input id="luxThreshold" type="number" value="150" min="0" max="5000"> <!-- Champ numérique pour la luminosité (par défaut 150 lux, max 5000). -->
             </div>
 
-            <div>
-              <label class="field-label" for="auto24">Auto capture if no photo (hours)</label>
-              <input id="auto24" type="number" value="24" min="1" max="168">
+            <div> <!-- Groupe pour le captage automatique. -->
+              <label class="field-label" for="auto24">Auto capture if no photo (hours)</label> <!-- Étiquette pour le captage automatique après inactivité. -->
+              <input id="auto24" type="number" value="24" min="1" max="168"> <!-- Champ numérique en heures (par défaut 24h, max 7 jours). -->
             </div>
 
-            <div>
-              <label class="field-label" for="minDisk">Minimum free disk (GB)</label>
-              <input id="minDisk" type="number" value="1" min="0" max="100">
+            <div> <!-- Groupe pour l'espace disque minimum. -->
+              <label class="field-label" for="minDisk">Minimum free disk (GB)</label> <!-- Étiquette pour l'espace disque minimum requis. -->
+              <input id="minDisk" type="number" value="1" min="0" max="100"> <!-- Champ numérique en gigabytes (par défaut 1 GB). -->
             </div>
 
-            <div>
-              <label class="field-label" for="udp">UDP after capture</label>
-              <select id="udp">
-                <option selected>Enabled</option>
-                <option>Disabled</option>
+            <div> <!-- Groupe pour l'envoi UDP après captage. -->
+              <label class="field-label" for="udp">UDP after capture</label> <!-- Étiquette pour l'envoi UDP. -->
+              <select id="udp"> <!-- Liste déroulante pour activer/désactiver UDP. -->
+                <option selected>Enabled</option> <!-- Option 1 : UDP activé (par défaut). -->
+                <option>Disabled</option> <!-- Option 2 : UDP désactivé. -->
               </select>
             </div>
 
-            <div class="wide">
-              <div class="policy-flags">
-                <label class="flag">
-                  <input type="checkbox" checked>
-                  <span>Check disk space before capture</span>
+            <div class="wide"> <!-- Conteneur pleine largeur pour les options. -->
+              <div class="policy-flags"> <!-- Groupe de cases à cocher pour les options. -->
+                <label class="flag"> <!-- Option 1 : Vérifier l'espace disque avant captage. -->
+                  <input type="checkbox" checked> <!-- Case à cocher cochée par défaut. -->
+                  <span>Check disk space before capture</span> <!-- Texte décrivant l'option. -->
                 </label>
 
-                <label class="flag">
-                  <input type="checkbox" checked>
-                  <span>Block capture if disk is insufficient</span>
+                <label class="flag"> <!-- Option 2 : Bloquer le captage si disque insuffisant. -->
+                  <input type="checkbox" checked> <!-- Case à cocher cochée par défaut. -->
+                  <span>Block capture if disk is insufficient</span> <!-- Texte décrivant l'option. -->
                 </label>
 
-                <label class="flag">
-                  <input type="checkbox" checked>
-                  <span>Trigger alarm when luminosity is under threshold</span>
+                <label class="flag"> <!-- Option 3 : Déclencher une alarme si luminosité basse. -->
+                  <input type="checkbox" checked> <!-- Case à cocher cochée par défaut. -->
+                  <span>Trigger alarm when luminosity is under threshold</span> <!-- Texte décrivant l'option. -->
                 </label>
 
-                <label class="flag">
-                  <input type="checkbox" checked>
-                  <span>Detect sensor failure</span>
+                <label class="flag"> <!-- Option 4 : Détecter les défaillances du capteur. -->
+                  <input type="checkbox" checked> <!-- Case à cocher cochée par défaut. -->
+                  <span>Detect sensor failure</span> <!-- Texte décrivant l'option. -->
                 </label>
               </div>
             </div>
           </div>
-        </section>
+        </section> <!-- Fin de la section capteur. -->
 
-        <footer class="foot">
-          <span>THALES16 • PHOTO_ATB</span>
-          <span class="muted">Local interface</span>
-        </footer>
-      </main>
-    </div>
-  </div>
+        <footer class="foot"> <!-- Pied de page affichant les informations de l'application. -->
+          <span>THALES16 • PHOTO_ATB</span> <!-- Nom et identifiant de l'application. -->
+          <span class="muted">Local interface</span> <!-- Descriptif du type d'interface. -->
+        </footer> <!-- Fin du pied de page. -->
+      </main> <!-- Fin du contenu principal. -->
+    </div> <!-- Fin du conteneur layout. -->
+  </div> <!-- Fin du conteneur principal de l'application. -->
 
-</body>
-</html>
+</body> <!-- Fin du corps du document. -->
+</html> <!-- Fin du document HTML. -->

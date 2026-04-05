@@ -1,62 +1,64 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>THALES16 — Login</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+<!doctype html> <!-- Déclare que ce document est une page HTML5. -->
+<html lang="en"> <!-- Élément racine contenant toute la page de connexion. L'attribut 'lang="en"' définit la langue principale. -->
+<head> <!-- Section d'en-tête contenant les métadonnées et liens vers les ressources externes. -->
+  <meta charset="utf-8"> <!-- Définit l'encodage des caractères en UTF-8 pour supporter tous les caractères spéciaux et accentués. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Assure que la page s'adapte à la taille de l'écran en mode responsive sur tous les appareils. -->
+  <title>THALES16 — Login</title> <!-- Titre affiché dans l'onglet du navigateur et utilisé par les moteurs de recherche. -->
+  <link rel="stylesheet" href="https://isis.unice.fr/~bi507141/acces/SAE15/assets/css/style.css"> <!-- Importe la feuille de style CSS externe qui contient tous les styles visuels et la mise en page. -->
+</head> <!-- Fin de la section d'en-tête. -->
+<body> <!-- Début du corps du document HTML qui contient tout le contenu visible de la page. -->
 
-  <div class="split">
+  <div class="split"> <!-- Conteneur créant une disposition en deux colonnes : illustration gauche + formulaire droite. -->
 
-    <!-- LEFT (white) -->
-    <section class="split-left">
-      <div class="left-inner">
+    <!-- LEFT (white) : Colonne gauche avec illustration -->
+    <section class="split-left"> <!-- Section gauche avec fond blanc contenant l'illustration. -->
+      <div class="left-inner"> <!-- Conteneur interne pour l'illustration. -->
         <img
           class="illustration"
           src="https://www.ucf.edu/wp-content/blogs.dir/19/files/2019/12/how-much-can-you-make-engineering.jpg"
-          alt="Login illustration">
+          alt="Login illustration"> <!-- Image d'illustration affichée sur la gauche pour créer un contexte visuel attrayant. -->
       </div>
     </section>
 
-    <!-- RIGHT (blue) -->
-    <section class="split-right">
-      <div class="login-card">
-        <h1 class="card-title">Hello!</h1>
-        <p class="card-subtitle">Sign in to get started — <b>THALES16</b></p>
+    <!-- RIGHT (blue) : Colonne droite avec formulaire de connexion -->
+    <section class="split-right"> <!-- Section droite avec fond bleu contenant le formulaire de connexion. -->
+      <div class="login-card"> <!-- Carte contenant le formulaire de connexion avec fond blanc. -->
+        <h1 class="card-title">Hello!</h1> <!-- Titre d'accueil de la page de connexion. -->
+        <p class="card-subtitle">Sign in to get started — <b>THALES16</b></p> <!-- Sous-titre encourageant l'utilisateur à se connecter. -->
 
-        <form class="form" action="first-login.html">
-          <label class="field">
-            <span class="field-label">Email Address</span>
-            <div class="input">
-              <span class="icon" aria-hidden="true">✉</span>
-              <input type="email" placeholder="email@example.com" required>
+        <form class="form" action="first-login.html"> <!-- Formulaire de connexion qui envoie les données vers la page first-login.html. -->
+         <label class="field"> <!-- Label group for the username field. -->
+          <span class="field-label">Username</span> <!-- Descriptive label for the username field. -->
+          <div class="input"> <!-- Container for the input field with icon. -->
+           <span class="icon" aria-hidden="true">👤</span> <!-- Username icon. -->
+            <input type="text" placeholder="ex: admin01" required> <!-- Username input field (required). -->
+          </div>
+        </label>
+
+          <label class="field"> <!-- Groupe de label pour le champ mot de passe. -->
+            <span class="field-label">Password</span> <!-- Étiquette descriptive pour le champ mot de passe. -->
+            <div class="input"> <!-- Conteneur du champ de saisie avec icône. -->
+              <span class="icon" aria-hidden="true">🔒</span> <!-- Icône cadenas pour le mot de passe. -->
+              <input type="password" placeholder="••••••••" required> <!-- Champ de saisie mot de passe (obligatoire). -->
             </div>
           </label>
 
-          <label class="field">
-            <span class="field-label">Password</span>
-            <div class="input">
-              <span class="icon" aria-hidden="true">🔒</span>
-              <input type="password" placeholder="••••••••" required>
-            </div>
-          </label>
+          <button class="btn-primary" type="submit">Login</button> <!-- Bouton de connexion pour soumettre le formulaire. -->
+          <a class="btn-outline guest-btn" href="guest-take-photo.html">Continue as Guest</a>
 
-          <button class="btn-primary" type="submit">Login</button>
-
-          <a class="link-muted" href="#">Forgot Password?</a>
+          <a class="link-muted" href="#">Forgot Password?</a> <!-- Lien pour accéder à la page de réinitialisation de mot de passe. -->
 
           <div class="small-note">
-          </div>
+          </div> <!-- Espace pour une note additionnelle (actuellement vide). -->
         </form>
       </div>
-
-      <!-- simple decorative curves (optional) -->
-      <div class="curves" aria-hidden="true"></div>
+  
+      <!-- Élément décoratif : courbes animées au bas à droite -->
+      <div class="curves" aria-hidden="true"></div> <!-- Élément purement décoratif créant des courbes visuelles (caché des lecteurs d'écran). -->
     </section>
 
   </div>
 
-</body>
-</html>
+</body> <!-- Fin du corps du document. -->
+</html> <!-- Fin du document HTML. -->
+
